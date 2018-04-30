@@ -1,39 +1,87 @@
-\documentclass[a4paper, 12pt, landscape]{article}
+\documentclass[10pt,a4paper,landscape]{article}
+\usepackage[left=0.55cm,right=0.55cm,top=1.10cm,bottom=0.55cm,landscape,
+headsep=2mm]{geometry}
 
-\usepackage[landscape]{geometry}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
 \usepackage{multicol}
-\usepackage{amsmath}
-\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\usepackage{enumitem}
+\setitemize{leftmargin=15pt}  
+\setenumerate{leftmargin=15pt}  
+\usepackage{titlesec}
+\usepackage{color,soul}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning}
+\usepackage[babel,german=quotes]{csquotes}
+\usepackage{arydshln}
+\usepackage[fleqn]{amsmath}
+\usepackage{setspace}
 \usepackage{amssymb}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{pbox}
+\usepackage{pifont}
+\usepackage{wrapfig}
+\usepackage[T1]{fontenc}
 
-\title{Statistik Formelsammlung SoSe2018}
+% Header
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{Formelsammlung Statistik SoSe 2018}
+\fancyhead[R]{Seite $\thepage$ von $\pageref{LastPage}$}
+\fancyheadoffset{0cm}
 
-\setlength{\columnseprule}{0.4pt}
-\setlength{\columnsep}{5pt}
+% Document
+\setlength{\columnseprule}{0.5pt}
+\setlength{\topskip}{10pt} 
+\setlist{nosep}
 
-\geometry{left=1cm, right=1cm, top=1cm, bottom=1cm}
+\titleformat*{\section}{\normalsize\bfseries}
+\titleformat*{\subsection}{\small\bfseries}
+\titleformat*{\subsubsection}{\small\bfseries}
+\titleformat*{\paragraph}{\bfseries}
+\titleformat*{\subparagraph}{\bfseries}
 
+\titlespacing*{\section}
+{0pt}{4pt}{0pt}
+\titlespacing*{\subsection}
+{0pt}{4pt}{0pt}
+\titlespacing*{\subsubsection}
+{0pt}{4pt}{0pt}
+\titlespacing*{\paragraph}
+{0pt}{4pt}{8pt}
+
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\makeatletter 
+\newcommand{\xRightarrow}[2][]{\ext@arrow 0359\Rightarrowfill@{#1}{#2}} 
+\makeatother 
+
+% Content 
 \begin{document}
-\begin{tabular}{|p{8cm}|p{8cm}|p{8cm}|}
-\hline
-\section{Beschreibende Statistik} \\
-\hline
-\subsection{Lageparameter} \\
-\hline
-\subsubsection{Arithmetisches Mittel} \\
-\[\bar{x}=\frac{1}{n}\sum \limits_{i=1}^n x_i=\frac{1}{n}(x_1 + \dots + a_n)\] \\
-\hline
-\subsubsection{Geometrisches Mittel} \\
+\begin{multicols}{4}
+\section{Beschreibende Statistik}
+\subsection{Lageparameter}
+Arithmetisches Mittel \\
+\parbox{\columnwidth}{\centering$\bar{x}=\frac{1}{n}\sum \limits_{i=1}^n x_i=\frac{1}{n}(x_1 + \dots + a_n)$}\\
 
-\[\bar{x}_{geom} = \sqrt[n]{x_1 \cdot x_2 \cdot \dots \cdot x_n}\] \\
-\hline
-\end{tabular}
+Geometrisches Mittel \\
+\parbox{\columnwidth}{\centering$\bar{x}_{geom} = \sqrt[n]{x_1 \cdot x_2 \cdot \dots \cdot x_n}$}\\
 
-\subsubsection{Median}
+Median \\
+\[\tilde{x}=\begin{cases}x_{\frac{n+1}{2}}\\\frac{1}{2}(x_{\frac{n}{2}}+x_{\frac{n}{2}+1})\end{cases}\]
 
-\subsubsection{Modus}
+Modus \\
 
-\paragraph{}
-\subparagraph{}
 
+\end{multicols}
 \end{document}
