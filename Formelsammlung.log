@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.30)  30 APR 2018 22:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.30)  1 MAY 2018 22:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1216,43 +1216,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--79
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
+Underfull \hbox (badness 10000) in paragraph at lines 80--82
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
+Underfull \hbox (badness 10000) in paragraph at lines 83--85
 
  []
 
 
-AED: lastpage setting LastPage
+Underfull \hbox (badness 10000) in paragraph at lines 87--89
+
+ []
+
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-] (./Formelsammlung.aux) ) 
+]
+
+AED: lastpage setting LastPage
+(./Formelsammlung.aux) ) 
 Here is how much of TeX's memory you used:
- 18114 strings out of 494860
- 334433 string characters out of 6177602
- 414127 words of memory out of 5000000
- 21028 multiletter control sequences out of 15000+600000
+ 18115 strings out of 494860
+ 334448 string characters out of 6177602
+ 412127 words of memory out of 5000000
+ 21029 multiletter control sequences out of 15000+600000
  9422 words of font info for 29 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 55i,13n,66p,824b,289s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/basti/.texmf-var/fonts/pk/ljfour/jknappen/ec/
-ecbx0900.600pk> </home/basti/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.60
-0pk> </home/basti/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb>
-Output written on Formelsammlung.pdf (1 page, 78334 bytes).
+ 55i,13n,66p,824b,428s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/basti/.texmf-var/fonts/pk/ljfour/jknappen/ec/ec
+bx0900.600pk> </home/basti/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600p
+k> </home/basti/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy7.pfb>
+Output written on Formelsammlung.pdf (1 page, 89476 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 43 compressed objects within 1 object stream
+ 115 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

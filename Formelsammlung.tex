@@ -68,7 +68,7 @@ headsep=2mm]{geometry}
 
 % Content 
 \begin{document}
-\begin{multicols}{4}
+\begin{multicols*}{4}
 \section{Beschreibende Statistik}
 \subsection{Lageparameter}
 Arithmetisches Mittel \\
@@ -78,10 +78,14 @@ Geometrisches Mittel \\
 \parbox{\columnwidth}{\centering$\bar{x}_{geom} = \sqrt[n]{x_1 \cdot x_2 \cdot \dots \cdot x_n}$}\\
 
 Median \\
-\[\tilde{x}=\begin{cases}x_{\frac{n+1}{2}}\\\frac{1}{2}(x_{\frac{n}{2}}+x_{\frac{n}{2}+1})\end{cases}\]
+\parbox{\columnwidth}{\centering\[\tilde{x}=\begin{cases}x_{\frac{n+1}{2}}\\\frac{1}{2}(x_{\frac{n}{2}}+x_{\frac{n}{2}+1})\end{cases}\]}\\
 
-Modus \\
+Der Median $\tilde{x}$ minimiert die Funktion \\
+\parbox{\columnwidth}{\centering$\sum_{i=0}^N|x_i-\tilde{x}|$}\\
 
+\subsection{Streungsmaße}
+Varianz \\
+\parbox{\columnwidth}{\centering$var = \sigma^2 = {s_n}^2 = \frac{1}{n-1} \sum_{i=1}^n(x_i-\tilde{x})^2$}\\
 
-\end{multicols}
+\end{multicols*}
 \end{document}
