@@ -81,11 +81,107 @@ Median \\
 \parbox{\columnwidth}{\centering\[\tilde{x}=\begin{cases}x_{\frac{n+1}{2}}\\\frac{1}{2}(x_{\frac{n}{2}}+x_{\frac{n}{2}+1})\end{cases}\]}\\
 
 Der Median $\tilde{x}$ minimiert die Funktion \\
-\parbox{\columnwidth}{\centering$\sum_{i=0}^N|x_i-\tilde{x}|$}\\
+\parbox{\columnwidth}{\centering$\sum \limits_{i=0}^N|x_i-\tilde{x}|$}\\
 
 \subsection{Streungsmaße}
 Varianz \\
-\parbox{\columnwidth}{\centering$var = \sigma^2 = {s_n}^2 = \frac{1}{n-1} \sum_{i=1}^n(x_i-\tilde{x})^2$}\\
+\parbox{\columnwidth}{\centering$var = \sigma^2 = {s_n}^2 = \frac{1}{n-1} \sum \limits_{i=1}^n(x_i-\tilde{x})^2$}\\
+
+Standardabweichung \\
+\parbox{\columnwidth}{\centering$\sigma = \sqrt{\sigma^2}$}\\
+\\
+\parbox{\columnwidth}{\centering$\sigma = \sqrt{{s_n}^2}$}\\
+
+
+\subsection{Kovarianz und Korrelationskoeffizient}
+Kovarianz \\
+\parbox{\columnwidth}{\centering$cov(x,y) = S_{xy} = \frac{1}{n-1}\sum \limits_{i=1}^1(x_i-\bar{x})\cdot(y_i-\bar{y})$}\\
+
+Korrelationskoeffizent \\
+\parbox{\columnwidth}{\centering$r_{xy} = \frac{S_{xy}}{S_x \cdot S_y}$}\\
+Der Korrelationskoeffizent liegt immer zwischen $-1 \leq r \leq 1$\\
+
+\subsection{Regressionsrechnung}
+Regressionsgerade\\
+Variante 1\\
+\parbox{\columnwidth}{\centering$y = \bar{y} + \frac{S_{xy}}{{\sigma_x}^2} \cdot (x-\bar{x})$}\\
+Variante 2\\
+\parbox{\columnwidth}{\centering$y = b + a \cdot x$}\\
+\parbox{\columnwidth}{\centering$a = \frac{S_{xy}}{{\sigma_x}^2}$ und $b = \bar{y} - a \cdot \bar{x}$}\\
+
+\section{Wahrscheinlichkeitstheorie}
+\subsection{Wahrscheinlichkeitsräume}
+Der Wahrscheinlichkeitsbegriff\\
+\parbox{\columnwidth}{\centering$Ergebnismenge = \Omega$}\\
+\parbox{\columnwidth}{\centering Beispiel Würfel $\Omega = \{ 1, 2, 3, 4, 5, 6 \}$}\\
+\parbox{\columnwidth}{\centering Ein Ereignis ist eine Teilmenge der Ergebnismenge}\\\\
+\parbox{\columnwidth}{\centering$\varnothing \, \subseteq \, \Omega \, \widehat{=}$ unmögliches Ereignis}\\
+\parbox{\columnwidth}{\centering$\Omega \, \subseteq \, \Omega \, \widehat{=}$ sicheres Ereignis}\\\\
+\parbox{\columnwidth}{\centering$A = \{1, 2, 3 \}$ Ereignis}\\
+\parbox{\columnwidth}{\centering$\bar{A} = \{4, 5, 6 \}$ Gegenereignis}\\\\
+Elementarereignis\\
+\parbox{\columnwidth}{\centering einelementige Teilmenge von $\Omega$}\\
+\parbox{\columnwidth}{\centering Ereignis, eine 3 werfen}\\
+\parbox{\columnwidth}{\centering $B = \{ 3 \}$}\\
+\parbox{\columnwidth}{\centering $P(\{3\}) = \frac{1}{6}$}\\
+
+Laplace-Versuch\\
+\parbox{\columnwidth}{\centering Jedes Elementarereignis ist gleich wahrscheinlich}\\\\
+\parbox{\columnwidth}{\centering $P(\{\omega_i\}) = \frac{1}{\vert \Omega \vert}$}\\
+\parbox{\columnwidth}{\centering $P(A) = \frac{\vert A \vert}{\vert \Omega \vert} = \frac{3}{6} = \frac{1}{2}$}\\
+
+\subsection{Bedingte Wahrscheinlichkeit}
+Bedingte Wahrscheinlichkeit\\\\
+\parbox{\columnwidth}{\centering Wahrscheinlichkeit für A unter der Bedingung B}\\
+\parbox{\columnwidth}{\centering $P(A \vert B) = \frac{P(A \cap B)}{P(B)}$}\\
+\parbox{\columnwidth}{\centering $P(\bar{A} \vert B) = 1 - P(A \vert B)$}\\\\
+
+Formel von Bayes\\
+\parbox{\columnwidth}{\centering $P(A \vert B) = \frac{P(B \vert A) \cdot P(A)}{P(B)}$}\\\\
+
+Satz der totalen Wahrscheinlichkeit\\
+\parbox{\columnwidth}{\centering $P(A) = \sum \limits_{i}^n (P(A \vert B_i) \cdot P(B_i)$}\\
+
+Allgemeine Regeln\\
+\parbox{\columnwidth}{\centering $P(A \cap B) = P(A \vert B) \cdot P(B) = P(B \vert A) \cdot P(A)$}\\
+\parbox{\columnwidth}{\centering $P(A \cup B) = P(A) + P(B) - P(A \cap B)$}\\ 
+\parbox{\columnwidth}{\centering $P(\bar{A}) = 1 - P(A)$}\\ 
+\parbox{\columnwidth}{\centering $P(\bar{A \cup B}) = P(\bar{A} \cap \bar{B})$}\\
+\parbox{\columnwidth}{\centering $P(\bar{A \cap B}) = P(\bar{A} \cup \bar{B})$}\\
+\parbox{\columnwidth}{\centering Wenn A und B unabhängig, dann gilt}\\
+\parbox{\columnwidth}{\centering $P(A \cap B) = P(A) \cdot P(B)$}\\
+
+\subsection{Zufallsvariablen}
+\parbox{\columnwidth}{\centering Eine Zufallsvariable ist eine Zuordnungsvorschrift die jedem  möglichen Ergebnis eines Zufallsexperiments eine Größe zuordnet}\\\\
+\parbox{\columnwidth}{\centering $X = k \, \widehat{=} \, \{ \omega \in \Omega \vert X( \omega = k \}$}\\
+\parbox{\columnwidth}{\centering $X = 3 \, \widehat{=} \, \{ \omega \in \Omega \vert X( \omega = 3 \}$}\\
+\parbox{\columnwidth}{\centering $X \leq k \, \widehat{=} \, \{ \omega \in \Omega \vert X( \omega \leq k \}$}\\
+
+\subsection{Diskrete Verteilungen}
+Binomialverteilung\\
+\parbox{\columnwidth}{\centering $X \sim B(n,p)$}\\
+\parbox{\columnwidth}{\centering $n =:$ Stichprobenumfang}\\
+\parbox{\columnwidth}{\centering $p =:$ Wahrscheinlichkeitg}\\
+\parbox{\columnwidth}{\centering ($p$ muss bei Binomialverteilung fest bleiben)}\\
+\parbox{\columnwidth}{\centering $P(X=k) = \binom{n}{k} \cdot p^k \cdot (1-p)^{n-k}$}\\
+\parbox{\columnwidth}{\centering $P(X \leq k) = \sum \limits_{i=0}^k\binom{n}{i} \cdot p^i \cdot (1-p)^{n-i}$}\\
+\parbox{\columnwidth}{\centering $P(X > k) = 1 - P(X \leq k)$}\\\\
+\parbox{\columnwidth}{\centering Eingabe Taschenrechner}\\
+\parbox{\columnwidth}{\centering $\binom{n}{k} \, \widehat{=} \, n \, \vert nCr \vert \, k$}\\\\
+
+Hypergeometrische Verteilung\\ 
+\parbox{\columnwidth}{\centering $X \sim H(N, M, n)$}\\
+\parbox{\columnwidth}{\centering $n =:$ Stichprobenumfang}\\
+\parbox{\columnwidth}{\centering $N =:$ Gesamtzahl}\\
+\parbox{\columnwidth}{\centering $M =:$ Anzahl der Elemente mit der Eigenschaft}\\
+\parbox{\columnwidth}{\centering $P(X = k) = \frac{\binom{M}{k} \cdot \binom{N-M}{n-k}}{\binom{N}{n}} $}\\
+\parbox{\columnwidth}{\centering $P(X \leq k) = \sum \limits_{i=0}^k \frac{\binom{M}{i} \cdot \binom{N-M}{n-i}}{\binom{N}{n}} $}\\
+\parbox{\columnwidth}{\centering $P(X > k) = 1 - P(X \leq k)$}\\
+
+Poisson Verteilung\\
+\parbox{\columnwidth}{\centering $X \sim Pois(\lambda)$}\\
+\parbox{\columnwidth}{\centering $P(X = k) = \pi_\lambda(k) = \frac{\lambda^k}{k!} \cdot e^{-\lambda}$}\\
+
 
 \end{multicols*}
 \end{document}
