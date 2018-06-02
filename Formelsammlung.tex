@@ -185,9 +185,61 @@ Variante 2\\
 \framebox[\columnwidth][l]{Normalverteilung}\\ \\
 \parbox{\columnwidth}{\centering $X \sim N(\mu, \sigma^2)$}\\ \\
 \parbox{\columnwidth}{\centering Ist $X \sim N(0, 1)$ dann heißt sie Standardnormalverteilt}\\ \\
-\parbox{\columnwidth}{\centering Jede Normalverteilung kann standisiert werden, das heißt die Kurve wird in die Mitte des Graphen verschoben}\\ \\
-\parbox{\columnwidth}{\centering Wenn $X \sim N(\mu, \sigma^2)$}\\ 
-\parbox{\columnwidth}{\centering dann ist $Z = \frac{x-\mu}{\sigma} \sim N(0,1)$}\\ \\
+\parbox{\columnwidth}{\centering Jede Normalverteilung kann standardisiert werden, das heißt die Mitte der Kurve wird auf den Nullpunkt gesetzt}\\ \\
+\parbox{\columnwidth}{\centering Wenn $X \sim N(\mu, \sigma^2)$ verteilt ist}\\ 
+\parbox{\columnwidth}{\centering dann ist die standardisierte Zufallsvariable $Z = \frac{x-\mu}{\sigma} \sim N(0,1)$ standardnormalverteilt}\\ \\
+\parbox{\columnwidth}{\centering Ist die Zufallsvariable standardverteilt kann die Wahrscheinlichkeit aus der Tabelle abgelesen werden}\\ \\
+\parbox{\columnwidth}{\centering $P(X \leq k) = \Phi(k)$}\\ \\
+\parbox{\columnwidth}{\centering $P(X = k) = \Phi(k) = 0$}\\ \\
+\parbox{\columnwidth}{\centering $P(X \leq -k) = 1 - \Phi(+k)$}\\ \\
+\parbox{\columnwidth}{\centering allgemein gilt}\\
+\parbox{\columnwidth}{\centering $X \sim N (\mu, \sigma^2)$}\\
+\parbox{\columnwidth}{\centering $P(X \leq k) = \Phi(\frac{k-\mu}{\sigma})$}\\ \\
+\framebox[\columnwidth][l]{Quantile der Normalverteilung}\\ \\
+\parbox{\columnwidth}{\centering Tabelliert ist das $\beta-$Quantil $z_\beta$ der Normalverteilung $N(0,1)$}\\ \\
+\parbox{\columnwidth}{\centering $P(X \leq z_\beta) = \beta$}\\
+\parbox{\columnwidth}{\centering $z_{1-\beta} = -z_\beta$}\\ \\
+\parbox{\columnwidth}{\centering Beispiel}\\
+\parbox{\columnwidth}{\centering $\beta = 0.9 => z_\beta = 1.28155$}\\
+
+\subsection{\framebox[\columnwidth][l]{Erwartungswert und Varianz}}
+\subsubsection{\framebox[\columnwidth][l]{Erwartungswert}}
+\framebox[\columnwidth][l]{Zufallsvariable mit diskreter Verteilung}\\ \\
+\parbox{\columnwidth}{\centering $\mu = E(X) = \sum \limits_{i=0}^n (x_i \cdot p_i)$}\\ \\
+\framebox[\columnwidth][l]{Zufallsvariable mit Dichtefunktion $f$}\\ \\
+\parbox{\columnwidth}{\centering $\mu = E(X) = \int_{-\infty}^{\infty} x \cdot f(x) dx $}\\ \\
+\framebox[\columnwidth][l]{Für Binomialverteilung}\\ \\
+\parbox{\columnwidth}{\centering $\mu = E(X) = n \cdot p$}\\ \\
+\framebox[\columnwidth][l]{Für geometrische Verteilung}\\ \\
+\parbox{\columnwidth}{\centering $\mu = E(X) = \frac{1}{p}$}\\ \\
+\framebox[\columnwidth][l]{Für Poissonverteilung}\\ \\
+\parbox{\columnwidth}{\centering $\mu = E(X) = \lambda$}\\ \\
+\framebox[\columnwidth][l]{Für Hypergeometrischeverteilung}\\ \\
+\parbox{\columnwidth}{\centering $E(S_n) = E(X_1 + ... + X_n) = n \cdot E(X_1) = n \cdot \frac{M}{N}$}\\ \\
+\framebox[\columnwidth][l]{Allgemeine Regeln für den Erwartungswert}\\ \\
+\parbox{\columnwidth}{\centering $a, b \in \mathbb{R}$}\\
+\parbox{\columnwidth}{\centering $E(aX + b) = a \cdot E(X) + b$}\\
+\parbox{\columnwidth}{\centering $E(X + Y) = E(X) + E(Y)$}\\
+\parbox{\columnwidth}{\centering $E(aX + bY) = a \cdot E(X) + b \cdot E(Y)$}\\
+\subsubsection{\framebox[\columnwidth][l]{Varianz}}
+\framebox[\columnwidth][l]{Zufallsvariable mit diskreter Verteilung}\\ \\
+\parbox{\columnwidth}{\centering $\sigma^2 = Var(X) = \sum (x_i - \mu)^2 \cdot p_i$}\\ \\
+\framebox[\columnwidth][l]{Zufallsvariable mit Dichtefunktion $f$}\\ \\
+\parbox{\columnwidth}{\centering $Var(X) = E(X^2) - (E(X))^2$}\\ \\
+\framebox[\columnwidth][l]{Für Binomialverteilung}\\ \\
+\parbox{\columnwidth}{\centering $\sigma^2 = n \cdot p \cdot (1-p)$}\\ \\
+\framebox[\columnwidth][l]{Für geometrische Verteilung}\\ \\
+\parbox{\columnwidth}{\centering $\sigma^2 = \frac{1}{p^2} - \frac{1}{p}$}\\ \\
+\framebox[\columnwidth][l]{Für Poissonverteilung}\\ \\
+\parbox{\columnwidth}{\centering $\sigma^2 = Var(X) = E(X^2) - E(X)^2 = \lambda$}\\ \\
+\framebox[\columnwidth][l]{Für Hypergeometrischeverteilung}\\ \\
+\parbox{\columnwidth}{\centering $Var(S_n) = n \cdot \frac{M}{N} \cdot (1 - \frac{M}{N}) \cdot \frac{N-n}{N-1}$}\\ \\
+\framebox[\columnwidth][l]{Allgemeine Regeln für Varianz}\\ \\
+\parbox{\columnwidth}{\centering $Var(X + Y) = Var(X) + Var(Y) + 2 \cdot cov(X,Y)$}\\
+\subsubsection{\framebox[\columnwidth][l]{Unabhängiger Zufallsvariablen}}
+\framebox[\columnwidth][l]{Allgemeine Regeln}\\ \\
+\parbox{\columnwidth}{\centering $E(X \cdot Y = E(X) \cdot E(Y)$}\\
+\parbox{\columnwidth}{\centering $Var(X + Y) = Var(X) + Var(Y)$}\\
 
 \end{multicols*}
 \end{document}

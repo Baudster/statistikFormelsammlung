@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.30)  2 JUN 2018 00:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.30)  2 JUN 2018 16:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1466,49 +1466,238 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--183
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--191
+Underfull \hbox (badness 10000) in paragraph at lines 185--204
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--191
+Underfull \hbox (badness 10000) in paragraph at lines 185--204
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--191
+Underfull \hbox (badness 10000) in paragraph at lines 185--204
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--191
+Underfull \hbox (badness 10000) in paragraph at lines 185--204
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--191
+Underfull \hbox (badness 10000) in paragraph at lines 185--204
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--191
+Underfull \hbox (badness 10000) in paragraph at lines 185--204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--204
 
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-] [2]
+]
+Underfull \hbox (badness 10000) in paragraph at lines 207--224
 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--224
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--224
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--224
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--224
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--224
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--224
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--224
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--224
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--224
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--224
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--224
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--224
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--224
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--243
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--243
+
+ []
+
+[2] 
 AED: lastpage setting LastPage
 (./Formelsammlung.aux) ) 
 Here is how much of TeX's memory you used:
- 18115 strings out of 494860
- 334448 string characters out of 6177602
- 436125 words of memory out of 5000000
- 21029 multiletter control sequences out of 15000+600000
+ 18121 strings out of 494860
+ 334566 string characters out of 6177602
+ 439127 words of memory out of 5000000
+ 21035 multiletter control sequences out of 15000+600000
  9422 words of font info for 29 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 55i,13n,66p,824b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,13n,66p,824b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/basti/.texmf-var/fonts/pk/ljfour/jknappen/ec/ec
 bx0900.600pk> </home/basti/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600p
 k> </home/basti/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk></usr/sha
@@ -1523,9 +1712,9 @@ amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 sy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 
-Output written on Formelsammlung.pdf (2 pages, 138659 bytes).
+Output written on Formelsammlung.pdf (2 pages, 146859 bytes).
 PDF statistics:
- 185 PDF objects out of 1000 (max. 8388607)
+ 189 PDF objects out of 1000 (max. 8388607)
  54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
