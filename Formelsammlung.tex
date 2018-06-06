@@ -31,6 +31,7 @@ headsep=2mm]{geometry}
 \usepackage{wrapfig}
 \usepackage[T1]{fontenc}
 
+
 % Header
 \pagestyle{fancy}
 \fancyhead{}
@@ -70,53 +71,64 @@ headsep=2mm]{geometry}
 \begin{document}
 \begin{multicols*}{4}
 
-\section{\framebox[\columnwidth][l]{Beschreibende Statistik}}
-\subsection{\framebox[\columnwidth][l]{Lageparameter}}
+\section{\noindent\framebox[\columnwidth][l]{Beschreibende Statistik}}
+\subsection{\noindent\framebox[\columnwidth][l]{Lageparameter}}
 
-\framebox[\columnwidth][l]{Arithmetisches Mittel}
+\noindent\framebox[\columnwidth][l]{Arithmetisches Mittel}
 \parbox{\columnwidth}{\centering$\bar{x}=\frac{1}{n}\sum \limits_{i=1}^n x_i=\frac{1}{n}(x_1 + \dots + a_n)$}
 
-\framebox[\columnwidth][l]{Geometrisches Mittel}
+\noindent\framebox[\columnwidth][l]{Geometrisches Mittel}
 \parbox{\columnwidth}{\centering$\bar{x}_{geom} = \sqrt[n]{x_1 \cdot x_2 \cdot \dots \cdot x_n}$}
 
-\framebox[\columnwidth][l]{Median}
+\noindent\framebox[\columnwidth][l]{Median}
 \parbox{\columnwidth}{\centering\[\tilde{x}=\begin{cases}x_{\frac{n+1}{2}}\\\frac{1}{2}(x_{\frac{n}{2}}+x_{\frac{n}{2}+1})\end{cases}\]}
 Der Median $\tilde{x}$ minimiert die Funktion
-\parbox{\columnwidth}{\centering$\sum \limits_{i=1}^n|x_i- \bar{x}|$}
+\parbox{\columnwidth}{\centering$\sum \limits_{i=1}^n \vert x_i- \bar{x} \vert$}
 
-\subsection{\framebox[\columnwidth][l]{Streungsmaße}}
+\subsection{\noindent\framebox[\columnwidth][l]{Streungsmaße}}
 
-\framebox[\columnwidth][l]{(empirische) Varianz}
-\parbox{\columnwidth}{\centering$var = \sigma^2 = {s_n}^2 = \frac{1}{n-1} \sum \limits_{i=1}^n(x_i-\tilde{x})^2$}
+\noindent\framebox[\columnwidth][l]{(empirische) Varianz}
+\parbox{\columnwidth}{\centering$var = \sigma^2 = {s_n}^2 = \frac{1}{n-1} \sum \limits_{i=1}^n(x_i-\bar{x})^2$}
 
-\framebox[\columnwidth][l]{Standardabweichung}
-\parbox{\columnwidth}{\centering$\sigma = \sqrt{\sigma^2}$}
-\parbox{\columnwidth}{\centering$\sigma = \sqrt{{s_n}^2}$}
+\noindent\framebox[\columnwidth][l]{Standardabweichung}
+\parbox{\columnwidth}{\centering$\sigma = s_n = \sqrt{\sigma^2}$}
+\parbox{\columnwidth}{\centering$\sigma = s_n = \sqrt{{s_n}^2}$}
 
-\subsection{\framebox[\columnwidth][l]{Kovarianz und Korrelationskoeffizient}}
+\noindent\framebox[\columnwidth][l]{mittlere absolute Abweichung}
+\parbox{\columnwidth}{\centering$\frac{1}{n} \sum \limits_{i=1}^n \vert x_i - \tilde{x} \vert$ für Median}
+\parbox{\columnwidth}{\centering$\frac{1}{n} \sum \limits_{i=1}^n \vert x_i - \bar{x} \vert$ für arithmetisches Mittel}
 
-\framebox[\columnwidth][l]{Kovarianz}
+\subsection{\noindent\framebox[\columnwidth][l]{Kovarianz und Korrelationskoeffizient}}
+
+\noindent\framebox[\columnwidth][l]{Kovarianz}
 \parbox{\columnwidth}{\centering$cov(x,y) = S_{xy} = \frac{1}{n-1}\sum \limits_{i=1}^1(x_i-\bar{x})\cdot(y_i-\bar{y})$}
 
-\framebox[\columnwidth][l]{Korrelationskoeffizent}
+\noindent\framebox[\columnwidth][l]{Korrelationskoeffizent}
 \parbox{\columnwidth}{\centering$r_{xy} = \frac{S_{xy}}{S_x \cdot S_y}$}
 Der Korrelationskoeffizent liegt immer zwischen $-1 \leq r \leq 1$
 
-\subsection{\framebox[\columnwidth][l]{Regressionsrechnung}}
+\subsection{\noindent\framebox[\columnwidth][l]{Regressionsrechnung}}
 
-\framebox[\columnwidth][l]{Regressionsgerade}
+\noindent\framebox[\columnwidth][l]{Regressionsgerade}
 \parbox{\columnwidth}{\centering Variante 1}
 \parbox{\columnwidth}{\centering$y = \bar{y} + \frac{S_{xy}}{{\sigma_x}^2} \cdot (x-\bar{x})$}
 \parbox{\columnwidth}{\centering Variante 2}
 \parbox{\columnwidth}{\centering$y = b + a \cdot x$}
 \parbox{\columnwidth}{\centering$a = \frac{S_{xy}}{{\sigma_x}^2}$ und $b = \bar{y} - a \cdot \bar{x}$}
 
-\framebox[\columnwidth][l]{kleinste quadratischen Abweichung}
+\noindent\framebox[\columnwidth][l]{Kleinste quadratische Abweichung}
+\parbox{\columnwidth}{\centering Die Parameter $a, b, c, ...$ werden so gewählt, dass}
+\parbox{\columnwidth}{\centering $Q(a,b,c,...) = \sum \limits_{i=1}^n (y_i - f_{a,b,c,...}(x_i))^2$}
+\parbox{\columnwidth}{\centering minimal ist}
+\parbox{\columnwidth}{\centering Nullsetzen der partiellen Ableitungen:}
+\parbox{\columnwidth}{\centering $\frac{\delta}{\delta a} Q(a,b) = 0 $}
+\parbox{\columnwidth}{\centering $\frac{\delta}{\delta b} Q(a,b) = 0 $}
+\parbox{\columnwidth}{\centering Über die Ableitungen lassen sich die Parameter finden welche die vorgegebene Funktion ambesten annähern}
 
-\section{\framebox[\columnwidth][l]{Wahrscheinlichkeitstheorie}}
-\subsection{\framebox[\columnwidth][l]{Wahrscheinlichkeitsräume}}
+\section{\noindent\framebox[\columnwidth][l]{Wahrscheinlichkeitstheorie}}
+\subsection{\noindent\framebox[\columnwidth][l]{Wahrscheinlichkeitsräume}}
 
-\framebox[\columnwidth][l]{Der Wahrscheinlichkeitsbegriff}
+\noindent\framebox[\columnwidth][l]{Der Wahrscheinlichkeitsbegriff}
 \parbox{\columnwidth}{\centering$Ergebnismenge = \Omega$}
 \parbox{\columnwidth}{\centering Beispiel Würfel $\Omega = \{ 1, 2, 3, 4, 5, 6 \}$}
 \parbox{\columnwidth}{\centering Ein Ereignis ist eine Teilmenge der Ergebnismenge}
@@ -125,31 +137,31 @@ Der Korrelationskoeffizent liegt immer zwischen $-1 \leq r \leq 1$
 \parbox{\columnwidth}{\centering$A = \{1, 2, 3 \}$ Ereignis}
 \parbox{\columnwidth}{\centering$\bar{A} = \{4, 5, 6 \}$ Gegenereignis}
 
-\framebox[\columnwidth][l]{Elementarereignis}
+\noindent\framebox[\columnwidth][l]{Elementarereignis}
 \parbox{\columnwidth}{\centering einelementige Teilmenge von $\Omega$}
 \parbox{\columnwidth}{\centering Ereignis, eine 3 werfen}
 \parbox{\columnwidth}{\centering $B = \{ 3 \}$}
 \parbox{\columnwidth}{\centering $P(\{3\}) = \frac{1}{6}$}
 
-\framebox[\columnwidth][l]{Laplace-Versuch}
+\noindent\framebox[\columnwidth][l]{Laplace-Versuch}
 \parbox{\columnwidth}{\centering Jedes Elementarereignis ist gleich wahrscheinlich}
 \parbox{\columnwidth}{\centering $P(\{\omega_i\}) = \frac{1}{\vert \Omega \vert}$}
 \parbox{\columnwidth}{\centering $P(A) = \frac{\vert A \vert}{\vert \Omega \vert} = \frac{3}{6} = \frac{1}{2}$}
 
-\subsection{\framebox[\columnwidth][l]{Bedingte Wahrscheinlichkeit}}
+\subsection{\noindent\framebox[\columnwidth][l]{Bedingte Wahrscheinlichkeit}}
 
-\framebox[\columnwidth][l]{Bedingte Wahrscheinlichkeit}
+\noindent\framebox[\columnwidth][l]{Bedingte Wahrscheinlichkeit}
 \parbox{\columnwidth}{\centering Wahrscheinlichkeit für A unter der Bedingung B}
 \parbox{\columnwidth}{\centering $P(A \vert B) = \frac{P(A \cap B)}{P(B)}$}
 \parbox{\columnwidth}{\centering $P(\bar{A} \vert B) = 1 - P(A \vert B)$}
 
-\framebox[\columnwidth][l]{Formel von Bayes}
+\noindent\framebox[\columnwidth][l]{Formel von Bayes}
 \parbox{\columnwidth}{\centering $P(A \vert B) = \frac{P(B \vert A) \cdot P(A)}{P(B)}$}
 
-\framebox[\columnwidth][l]{Satz der totalen Wahrscheinlichkeit}
+\noindent\framebox[\columnwidth][l]{Satz der totalen Wahrscheinlichkeit}
 \parbox{\columnwidth}{\centering $P(A) = \sum \limits_{i}^n (P(A \vert B_i) \cdot P(B_i)$}
 
-\framebox[\columnwidth][l]{Allgemeine Regeln}
+\noindent\framebox[\columnwidth][l]{Allgemeine Regeln}
 \parbox{\columnwidth}{\centering $P(A \cap B) = P(A \vert B) \cdot P(B) = P(B \vert A) \cdot P(A)$}
 \parbox{\columnwidth}{\centering $P(A \cup B) = P(A) + P(B) - P(A \cap B)$}
 \parbox{\columnwidth}{\centering $P(\bar{A}) = 1 - P(A)$}
@@ -158,16 +170,16 @@ Der Korrelationskoeffizent liegt immer zwischen $-1 \leq r \leq 1$
 \parbox{\columnwidth}{\centering Wenn A und B unabhängig, dann gilt}
 \parbox{\columnwidth}{\centering $P(A \cap B) = P(A) \cdot P(B)$}
 
-\subsection{\framebox[\columnwidth][l]{Zufallsvariablen}}
+\subsection{\noindent\framebox[\columnwidth][l]{Zufallsvariablen}}
 
 \parbox{\columnwidth}{\centering Eine Zufallsvariable ist eine Zuordnungsvorschrift die jedem  möglichen Ergebnis eines Zufallsexperiments eine Größe zuordnet}
 \parbox{\columnwidth}{\centering $X = k \, \widehat{=} \, \{ \omega \in \Omega \vert X( \omega = k \}$}
 \parbox{\columnwidth}{\centering $X = 3 \, \widehat{=} \, \{ \omega \in \Omega \vert X( \omega = 3 \}$}
 \parbox{\columnwidth}{\centering $X \leq k \, \widehat{=} \, \{ \omega \in \Omega \vert X( \omega \leq k \}$}
 
-\subsection{\framebox[\columnwidth][l]{Diskrete Verteilungen}}
+\subsection{\noindent\framebox[\columnwidth][l]{Diskrete Verteilungen}}
 
-\framebox[\columnwidth][l]{Binomialverteilung}
+\noindent\framebox[\columnwidth][l]{Binomialverteilung}
 \parbox{\columnwidth}{\centering Mit zurücklegen, Wahrscheinlichkeit für jedes Ereignis gleich }
 \parbox{\columnwidth}{\centering $X \sim B(n,p)$}
 \parbox{\columnwidth}{\centering $n =:$ Stichprobenumfang}
@@ -183,7 +195,7 @@ Der Korrelationskoeffizent liegt immer zwischen $-1 \leq r \leq 1$
 \parbox{\columnwidth}{\centering falls gilt}
 \parbox{\columnwidth}{\centering $n \cdot p \cdot (1-p) > 9$}
 
-\framebox[\columnwidth][l]{Hypergeometrische Verteilung}
+\noindent\framebox[\columnwidth][l]{Hypergeometrische Verteilung}
 \parbox{\columnwidth}{\centering Ohne zurücklegen, Wahrscheinlichkeit ändert sich nach jedem Ereignis}
 \parbox{\columnwidth}{\centering $X \sim H(N, M, n)$}
 \parbox{\columnwidth}{\centering $n =:$ Stichprobenumfang}
@@ -193,18 +205,18 @@ Der Korrelationskoeffizent liegt immer zwischen $-1 \leq r \leq 1$
 \parbox{\columnwidth}{\centering $P(X \leq k) = \sum \limits_{i=0}^k \frac{\binom{M}{i} \cdot \binom{N-M}{n-i}}{\binom{N}{n}} $}
 \parbox{\columnwidth}{\centering $P(X > k) = 1 - P(X \leq k)$}
 
-\framebox[\columnwidth][l]{Poisson Verteilung}
+\noindent\framebox[\columnwidth][l]{Poisson Verteilung}
 \parbox{\columnwidth}{\centering $X \sim Pois(\lambda)$}
 \parbox{\columnwidth}{\centering $P(X = k) = \pi_\lambda(k) = \frac{\lambda^k}{k!} \cdot e^{-\lambda}$}
 
-\framebox[\columnwidth][l]{Geometrische Verteilung}
+\noindent\framebox[\columnwidth][l]{Geometrische Verteilung}
 \parbox{\columnwidth}{\centering $X \sim Geom(n, p)$}
 \parbox{\columnwidth}{\centering $P(X = n) = (1-p)^{n-1} \cdot p^n$}
 \parbox{\columnwidth}{\centering Beispiel: Ein Würfel wird so lange gewürfelt bis eine 6 Auftritt. Die Zufallsvariable X ist gleich Anzahl der Würfe}
 
-\subsection{\framebox[\columnwidth][l]{Stetige Verteilungen}}
+\subsection{\noindent\framebox[\columnwidth][l]{Stetige Verteilungen}}
 
-\framebox[\columnwidth][l]{Normalverteilung}
+\noindent\framebox[\columnwidth][l]{Normalverteilung}
 \parbox{\columnwidth}{\centering $X \sim N(\mu, \sigma^2)$}
 \parbox{\columnwidth}{\centering Ist $X \sim N(0, 1)$ dann heißt sie Standardnormalverteilt}
 \parbox{\columnwidth}{\centering Jede Normalverteilung kann standardisiert werden, das heißt die Mitte der Kurve wird auf den Nullpunkt gesetzt}
@@ -218,68 +230,133 @@ Der Korrelationskoeffizent liegt immer zwischen $-1 \leq r \leq 1$
 \parbox{\columnwidth}{\centering $X \sim N (\mu, \sigma^2)$}
 \parbox{\columnwidth}{\centering $P(X \leq k) = \Phi(\frac{k-\mu}{\sigma})$}
 
-\framebox[\columnwidth][l]{Quantile der Normalverteilung}
+\noindent\framebox[\columnwidth][l]{Quantile der Normalverteilung}
 \parbox{\columnwidth}{\centering Tabelliert ist das $\beta-$Quantil $z_\beta$ der Normalverteilung $N(0,1)$}
 \parbox{\columnwidth}{\centering $P(X \leq z_\beta) = \beta$}
 \parbox{\columnwidth}{\centering $z_{1-\beta} = -z_\beta$}
 \parbox{\columnwidth}{\centering Beispiel}
 \parbox{\columnwidth}{\centering $\beta = 0.9 => z_\beta = 1.28155$}
 
-\subsection{\framebox[\columnwidth][l]{Erwartungswert und Varianz}}
-\subsubsection{\framebox[\columnwidth][l]{Erwartungswert}}
+\subsection{\noindent\framebox[\columnwidth][l]{Erwartungswert und Varianz}}
+\subsubsection{\noindent\framebox[\columnwidth][l]{Erwartungswert}}
 
-\framebox[\columnwidth][l]{Zufallsvariable mit diskreter Verteilung}
+\noindent\framebox[\columnwidth][l]{Zufallsvariable mit diskreter Verteilung}
 \parbox{\columnwidth}{\centering $\mu = E(X) = \sum \limits_{i=0}^n (x_i \cdot p_i)$}
 
-\framebox[\columnwidth][l]{Zufallsvariable mit Dichtefunktion $f$}
+\noindent\framebox[\columnwidth][l]{Zufallsvariable mit Dichtefunktion $f$}
 \parbox{\columnwidth}{\centering $\mu = E(X) = \int_{-\infty}^{\infty} x \cdot f(x) dx $}
 
-\framebox[\columnwidth][l]{Für Binomialverteilung}
+\noindent\framebox[\columnwidth][l]{Für Binomialverteilung}
 \parbox{\columnwidth}{\centering $\mu = E(X) = n \cdot p$}
 
-\framebox[\columnwidth][l]{Für geometrische Verteilung}
+\noindent\framebox[\columnwidth][l]{Für geometrische Verteilung}
 \parbox{\columnwidth}{\centering $\mu = E(X) = \frac{1}{p}$}
 
-\framebox[\columnwidth][l]{Für Poissonverteilung}
+\noindent\framebox[\columnwidth][l]{Für Poissonverteilung}
 \parbox{\columnwidth}{\centering $\mu = E(X) = \lambda$}
 
-\framebox[\columnwidth][l]{Für Hypergeometrischeverteilung}
+\noindent\framebox[\columnwidth][l]{Für Hypergeometrischeverteilung}
 \parbox{\columnwidth}{\centering $E(S_n) = E(X_1 + ... + X_n) = n \cdot E(X_1) = n \cdot \frac{M}{N}$}
 
-\framebox[\columnwidth][l]{Allgemeine Regeln für den Erwartungswert}
+\noindent\framebox[\columnwidth][l]{Allgemeine Regeln für den Erwartungswert}
 \parbox{\columnwidth}{\centering $a, b \in \mathbb{R}$}
 \parbox{\columnwidth}{\centering $E(aX + b) = a \cdot E(X) + b$}
 \parbox{\columnwidth}{\centering $E(X + Y) = E(X) + E(Y)$}
 \parbox{\columnwidth}{\centering $E(aX + bY) = a \cdot E(X) + b \cdot E(Y)$}
 
-\subsubsection{\framebox[\columnwidth][l]{Varianz}}
+\subsubsection{\noindent\framebox[\columnwidth][l]{Varianz}}
 
-\framebox[\columnwidth][l]{Zufallsvariable mit diskreter Verteilung}
+\noindent\framebox[\columnwidth][l]{Zufallsvariable mit diskreter Verteilung}
 \parbox{\columnwidth}{\centering $\sigma^2 = Var(X) = \sum (x_i - \mu)^2 \cdot p_i$}
 
-\framebox[\columnwidth][l]{Zufallsvariable mit Dichtefunktion $f$}
+\noindent\framebox[\columnwidth][l]{Zufallsvariable mit Dichtefunktion $f$}
 \parbox{\columnwidth}{\centering $Var(X) = E(X^2) - (E(X))^2$}
 
-\framebox[\columnwidth][l]{Für Binomialverteilung}
+\noindent\framebox[\columnwidth][l]{Für Binomialverteilung}
 \parbox{\columnwidth}{\centering $\sigma^2 = n \cdot p \cdot (1-p)$}
 
-\framebox[\columnwidth][l]{Für geometrische Verteilung}
+\noindent\framebox[\columnwidth][l]{Für geometrische Verteilung}
 \parbox{\columnwidth}{\centering $\sigma^2 = \frac{1}{p^2} - \frac{1}{p}$}
 
-\framebox[\columnwidth][l]{Für Poissonverteilung}
+\noindent\framebox[\columnwidth][l]{Für Poissonverteilung}
 \parbox{\columnwidth}{\centering $\sigma^2 = Var(X) = E(X^2) - E(X)^2 = \lambda$}
 
-\framebox[\columnwidth][l]{Für Hypergeometrischeverteilung}
+\noindent\framebox[\columnwidth][l]{Für Hypergeometrischeverteilung}
 \parbox{\columnwidth}{\centering $Var(S_n) = n \cdot \frac{M}{N} \cdot (1 - \frac{M}{N}) \cdot \frac{N-n}{N-1}$}
 
-\framebox[\columnwidth][l]{Allgemeine Regeln für Varianz}
+\noindent\framebox[\columnwidth][l]{Allgemeine Regeln für Varianz}
 \parbox{\columnwidth}{\centering $Var(X + Y) = Var(X) + Var(Y) + 2 \cdot cov(X,Y)$}
 
-\subsubsection{\framebox[\columnwidth][l]{Unabhängiger Zufallsvariablen}}
+\subsubsection{\noindent\framebox[\columnwidth][l]{Unabhängiger Zufallsvariablen}}
 
-\framebox[\columnwidth][l]{Allgemeine Regeln}
+\noindent\framebox[\columnwidth][l]{Allgemeine Regeln}
 \parbox{\columnwidth}{\centering $E(X \cdot Y = E(X) \cdot E(Y)$}
 \parbox{\columnwidth}{\centering $Var(X + Y) = Var(X) + Var(Y)$}
+
+\section{\noindent\framebox[\columnwidth][l]{Allgemeine Matheregeln}}
+\subsection{\noindent\framebox[\columnwidth][l]{Ableitungen und Integrale}}
+
+\noindent\framebox[\columnwidth][l]{Grundlegende Ableitungsregeln}
+\def\arraystretch{1.5}% 
+\begin{tabularx}{\columnwidth}{|X|X|}
+\cline{1-2}
+$f(x)$&$f'(x)$\\ 
+\cline{1-2}
+$c = const$&$0$\\
+\cline{1-2}
+$x^n$&$n \cdot x^{n-1}$\\
+\cline{1-2}
+$\sqrt{x}$&$\frac{1}{2\sqrt{x}}$\\
+\cline{1-2}
+$e^x$&$e^x$\\
+\cline{1-2}
+$a^x$&$\ln a \cdot a^x$\\
+\cline{1-2}
+$\ln x$&$\frac{1}{x}$\\
+\cline{1-2}
+$\log_a x$&$\frac{1}{\ln  a \cdot x}$\\
+\cline{1-2}
+$\sin{x}$&$\cos{x}$\\
+\cline{1-2}
+$\cos{x}$&$-\sin{x}$\\
+\cline{1-2}
+$\tan{x}$&$\frac{1}{\cos^2{x}}$\\
+\cline{1-2}
+$\cot{x}$&$\frac{1}{\sin^2{x}}$\\
+\cline{1-2}
+\end{tabularx}
+
+\noindent\framebox[\columnwidth][l]{Verknüpfte Ableitungsregeln}
+\def\arraystretch{1.5}% 
+\begin{tabularx}{\columnwidth}{|l|X|}
+\cline{1-2}
+$f(x)$&$f'(x)$\\
+\cline{1-2}
+$(f(x)+g(x))$&$(f'(x)+g'(x))$\\ 
+\cline{1-2}
+$(f(x) \cdot g(x))$&$(f'(x) \cdot g(x)) + (f(x) \cdot g'(x))$\\
+\cline{1-2}
+$\frac{f(x)}{g(x)}$&$\frac{(f'(x) \cdot g(x)) - (f(x) \cdot g'(x))}{g(x)^2}$\\
+\cline{1-2}
+$[f(g(x)]$&$f'(g(x)) \cdot g'(x)$\\
+\cline{1-2}
+\end{tabularx}
+
+\noindent\framebox[\columnwidth][l]{wichtige Stammfunktionen}
+\def\arraystretch{1.5}% 
+\begin{tabularx}{\columnwidth}{|X|X|}
+\cline{1-2}
+$f(x)$&$F(x)$\\
+\cline{1-2}
+$x^n, n \neq 1$&$\frac{1}{n-1} \cdot x^{n+1} + c$\\ 
+\cline{1-2}
+$\frac{1}{x}, x \neq 0$&$\vert \ln x \vert + c$\\
+\cline{1-2}
+$\sqrt{x}$&$\frac{2}{3} \cdot x^{\frac{3}{2}} + c$\\
+\cline{1-2}
+$e^x$&$e^x + c$\\
+\cline{1-2}
+\end{tabularx}
 
 \end{multicols*}
 \end{document}
