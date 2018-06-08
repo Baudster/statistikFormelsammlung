@@ -231,11 +231,19 @@
 
 	\subsubheading{Quantile der Normalverteilung}
 	\ccontent{ Tabelliert ist das $\beta-$Quantil $z_\beta$ der Normalverteilung $N(0,1)$}
-	\ccontent{ $P(X \leq z_\beta) = \beta$}
+	\ccontent{ $P(X \leq z_\beta = \beta$}
 	\ccontent{ $z_{1-\beta} = -z_\beta$}
 	\ccontent{ Beispiel}
 	\ccontent{ $\beta = 0.9 => z_\beta = 1.28155$}
-
+	
+	\subsubheading{Exponentialverteilung}
+	\ccontent{ Eine exponentialverteilte Zufallsvariable T hat die Dichte}
+	\ccontent{ \[f(t) = \begin{cases} \lambda \cdot e^{- \lambda \cdot t}, t \geq 0 \\ 0, t < 0 \end{cases}\]}
+	\ccontent{ und daraus eribt sich die Verteilungsfunktion}
+	\ccontent{ $ F(x) = P(T \leq x)$}
+	\ccontent{ \[P(T \leq x) = \int_{-\infty}^{x} f(t)dt = \begin{cases} 1 - e^{- \lambda \cdot x}, x \geq 0 \\ 0, x < 0 \end{cases}\]}
+	\ccontent{ Die Exponentialverteilung ist Gedächtnislos}
+	
 	\subheading{Erwartungswert und Varianz}
 	\subsubheading{\textbf{Erwartungswert}}
 
@@ -244,6 +252,9 @@
 
 	\subsubheading{Zufallsvariable mit Dichtefunktion $f$}
 	\ccontent{ $\mu = E(X) = \int_{-\infty}^{\infty} x \cdot f(x) dx $}
+	
+	\subsubheading{Exponentialverteilung mit Zufallsvariable T}
+	\ccontent{ $E(T) = \sigma_T = \frac{1}{\lambda}$}
 
 	\subsubheading{Für Binomialverteilung}
 	\ccontent{ $\mu = E(X) = n \cdot p$}
@@ -270,6 +281,9 @@
 
 	\subsubheading{Zufallsvariable mit Dichtefunktion $f$}
 	\ccontent{ $Var(X) = E(X^2) - (E(X))^2$}
+	
+	\subsubheading{Exponentialverteilung mit Zufallsvariable T}
+	\ccontent{ $Var(T) = \frac{1}{\lambda^2}$}
 
 	\subsubheading{Für Binomialverteilung}
 	\ccontent{ $\sigma^2 = n \cdot p \cdot (1-p)$}
