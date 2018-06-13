@@ -164,6 +164,19 @@
 
 	\subsubheading{Satz der totalen Wahrscheinlichkeit}
 	\ccontent{ $P(A) = \sum \limits_{i}^n (P(A \vert B_i) \cdot P(B_i)$}
+	
+	\subsubheading{Viel Felder Tafel}
+	\def\arraystretch{1.5}% 
+	\begin{tabularx}{\columnwidth}{l|X|X|r}
+					&$A$					&$\bar{A}$					&$\sum$\\
+		\cline{1-4}
+		$B$			&$P(A \cap B)$			&$P(\bar{A} \cap B)$		&$P(B)$\\
+		\cline{1-4}
+		$\bar{B}$	&$P(A \cap \bar{B})$	&$P(\bar{A} \cap \bar{B})$	&$P(\bar{B})$\\
+		\cline{1-4}
+		$\sum$		&$P(A)$					&$P(\bar{A})$				&$1$\\
+	\end{tabularx}
+	\ccontent{ Die Ränder sind immer die Summen der zugehörigen Zeilen oder Spalten}
 
 	\subsubheading{Allgemeine Regeln}
 	\ccontent{ $P(A \cap B) = P(A \vert B) \cdot P(B) = P(B \vert A) \cdot P(A)$}
@@ -248,9 +261,8 @@
 	\ccontent{ Die Exponentialverteilung ist Gedächtnislos}
 	
 	\subheading{Erwartungswert und Varianz}
-	\subsubheading{\textbf{Erwartungswert}}
-	
-	\ccontent{ Erwartungswert und Mittelwert\\sind prinzipiell gleichwertig,\\der Erwartungswert entspricht\\der theoretischen Erwartung,\\der Mittelwert\\entspricht den tatsächlichen\\Werten}
+	\subsubheading{\textbf{Erwartungswert}}	
+	\ccontent{ Erwartungswert und Mittelwert sind prinzipiell gleichwertig, der Erwartungswert entspricht der theoretischen Erwartung, der Mittelwert entspricht den tatsächlichen Werten}
 
 	\subsubheading{Zufallsvariable mit diskreter Verteilung}
 	\ccontent{ $\mu = E(X) = \sum \limits_{i=0}^n (x_i \cdot p_i)$}
@@ -272,6 +284,9 @@
 
 	\subsubheading{Für Hypergeometrischeverteilung}
 	\ccontent{ $E(S_n) = E(X_1 + ... + X_n) = n \cdot E(X_1) = n \cdot \frac{M}{N}$}
+	
+	\subsubheading{Für Rechteckverteilung}
+	\ccontent{ $E(T_i) = \frac{a+b}{2}$}
 
 	\subsubheading{Allgemeine Regeln für den Erwartungswert}
 	\ccontent{ $a, b \in \mathbb{R}$}
@@ -301,6 +316,9 @@
 
 	\subsubheading{Für Hypergeometrischeverteilung}
 	\ccontent{ $Var(S_n) = n \cdot \frac{M}{N} \cdot (1 - \frac{M}{N}) \cdot \frac{N-n}{N-1}$}
+	
+	\subsubheading{Für Rechteckverteilung}
+	\ccontent{$ Var(T_i) = \frac{(b-a)^2}{12}$}
 
 	\subsubheading{Allgemeine Regeln für Varianz}
 	\ccontent{ $Var(X + Y) = Var(X) + Var(Y) + 2 \cdot cov(X,Y)$}
@@ -310,6 +328,17 @@
 	\subsubheading{Allgemeine Regeln}
 	\ccontent{ $E(X \cdot Y = E(X) \cdot E(Y)$}
 	\ccontent{ $Var(X + Y) = Var(X) + Var(Y)$}
+	
+	\subheading{Wichtige Sätze der Stochastik}
+	\subsubheading{Zentraler Grenzwertsatz}
+	\ccontent{ n groß (Anzahl der Zufallsvariablen) $n \geq 30$}
+	\ccontent{ $X_i$ unabhängig und identisch verteilt}
+	\ccontent{ $\widehat{=}$ haben die gleiche Verteilung}
+	\ccontent{ $E(X_i) = \mu$}
+	\ccontent{ $Var(X_i) = \sigma^2$}
+	\ccontent{ $\sum X_i \sim N(n \cdot \mu, n \cdot \sigma^2)$}
+	\ccontent{ $\frac{1}{n} \sum \limits_{i=1}^n = \bar{x} \sim N(\mu, \frac{\sigma^2}{n}$}
+	\ccontent{ Manche Verteilungen verhalten sich in der Summe anders, zum Beispiel die Rechteckverteilung ist nicht mehr R-Verteilt. Dann wird der Zentrale Grenzwertsatz verwendet}
 
 	\heading{Allgemeine Matheregeln}
 	\subheading{Ableitungen und Integrale}
