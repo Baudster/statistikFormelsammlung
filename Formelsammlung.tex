@@ -105,7 +105,7 @@
 
 	\subheading{Kovarianz und Korrelationskoeffizient}
 	\subsubheading{Kovarianz}
-	\ccontent{$cov(x,y) = S_{xy} = \frac{1}{n-1}\sum \limits_{i=1}^1(x_i-\bar{x})\cdot(y_i-\bar{y})$}
+	\ccontent{$cov(x,y) = S_{xy} = \frac{1}{n-1}\sum \limits_{i=1}^n(x_i-\bar{x})\cdot(y_i-\bar{y})$}
 
 	\subsubheading{Korrelationskoeffizent}
 	\ccontent{$r_{xy} = \frac{S_{xy}}{S_x \cdot S_y}$}
@@ -243,12 +243,14 @@
 	\ccontent{ Eine exponentialverteilte Zufallsvariable T hat die Dichte}
 	\ccontent{ \[f(t) = \begin{cases} \lambda \cdot e^{- \lambda \cdot t}, t \geq 0 \\ 0, t < 0 \end{cases}\]}
 	\ccontent{ und daraus eribt sich die Verteilungsfunktion}
-	\ccontent{ $ F(x) = P(T \leq x)$}
-	\ccontent{ \[P(T \leq x) = \int_{-\infty}^{x} f(t)dt = \begin{cases} 1 - e^{- \lambda \cdot x}, x \geq 0 \\ 0, x < 0 \end{cases}\]}
+	\ccontent{ $ F(x) = P(T \leq x) = $}
+	\ccontent{ \[= \int_{-\infty}^{x} f(t)dt = \begin{cases} 1 - e^{- \lambda \cdot x}, x \geq 0 \\ 0, x < 0 \end{cases}\]}
 	\ccontent{ Die Exponentialverteilung ist Gedächtnislos}
 	
 	\subheading{Erwartungswert und Varianz}
 	\subsubheading{\textbf{Erwartungswert}}
+	
+	\ccontent{ Erwartungswert und Mittelwert\\sind prinzipiell gleichwertig,\\der Erwartungswert entspricht\\der theoretischen Erwartung,\\der Mittelwert\\entspricht den tatsächlichen\\Werten}
 
 	\subsubheading{Zufallsvariable mit diskreter Verteilung}
 	\ccontent{ $\mu = E(X) = \sum \limits_{i=0}^n (x_i \cdot p_i)$}
