@@ -87,7 +87,7 @@
 	\ccontent{$\bar{x}_{geom} = \sqrt[n]{x_1 \cdot x_2 \cdot \dots \cdot x_n}$}
 
 	\subsubheading{Median}
-	\ccontent{\[\tilde{x}=\begin{cases}x_{\frac{n+1}{2}}\\\frac{1}{2}(x_{\frac{n}{2}}+x_{\frac{n}{2}+1})\end{cases}\]}
+	\ccontent{\[\tilde{x}=\begin{cases}x_{\frac{n+1}{2}}, ungerade \\\frac{1}{2}(x_{\frac{n}{2}}+x_{\frac{n}{2}+1}), gerade \end{cases}\]}
 	Der Median $\tilde{x}$ minimiert die Funktion
 	\ccontent{$\sum \limits_{i=1}^n \vert x_i- \bar{x} \vert$}
 
@@ -129,7 +129,7 @@
 	\ccontent{ Nullsetzen der partiellen Ableitungen:}
 	\ccontent{ $\frac{\delta}{\delta a} Q(a,b) = 0 $}
 	\ccontent{ $\frac{\delta}{\delta b} Q(a,b) = 0 $}
-	\ccontent{ Über die Ableitungen lassen sich die Parameter finden welche die vorgegebene Funktion ambesten annähern}
+	\ccontent{ Über die Ableitungen lassen sich die Parameter finden welche die vorgegebene Funktion am besten annähern}
 
 	\heading{Wahrscheinlichkeitstheorie}
 	\subheading{Wahrscheinlichkeitsräume}
@@ -205,10 +205,12 @@
 	\ccontent{ $P(X > k) = 1 - P(X \leq k)$}
 	\ccontent{ Eingabe Taschenrechner}
 	\ccontent{ $\binom{n}{k} \, \widehat{=} \, n \, \vert nCr \vert \, k$}
-	\ccontent{ Binomialverteilung kann mit der Normalverteilung approximiert werden, bedingung ist}
+	\ccontent{ Die Binomialverteilung kann mit der Normalverteilung approximiert werden, \textbf{bedingung ist}}
 	\ccontent{ $X \sim B(n, p) \stackrel{a}{=} N(n \cdot p, n \cdot p \cdot (1-p))$}
 	\ccontent{ falls gilt}
 	\ccontent{ $n \cdot p \cdot (1-p) > 9$}
+	\ccontent{ Die Binomialverteilung kann mit der Poisson Verteilung approximiert werden, dann gilt}
+	\ccontent{ $\lambda = n \cdot p$}
 
 	\subsubheading{Hypergeometrische Verteilung}
 	\ccontent{ Ohne zurücklegen, Wahrscheinlichkeit ändert sich nach jedem Ereignis}
@@ -221,6 +223,7 @@
 	\ccontent{ $P(X > k) = 1 - P(X \leq k)$}
 
 	\subsubheading{Poisson Verteilung}
+	\ccontent{ Schlüsselwörter sind \textbf{Ereignisse pro Zeiteinheit}, zum Beispiel Anrufe innerhalb bestimmter Zeitspanne}
 	\ccontent{ $X \sim Pois(\lambda)$}
 	\ccontent{ $P(X = k) = \pi_\lambda(k) = \frac{\lambda^k}{k!} \cdot e^{-\lambda}$}
 
@@ -231,6 +234,23 @@
 
 	\subheading{Stetige Verteilungen}
 
+	\subsubheading{Dichtefunktion}
+	\ccontent{Die Dichtefunktion ist ein Hilfsmittel zur \textbf{Beschreibung einer stetigen Wahrscheinlichkeitsverteilung}}
+	\ccontent{Bedingungen der Dichtefunkion}
+	\ccontent{ $f(x) \geq 0$}
+	\ccontent{ $\int_{-\infty}^{\infty} f(x)dx = 1$}
+	\ccontent{Die Dichtefunktion muss \textbf{nicht} stetig sein}
+	\ccontent{Die Dichtefunktion ist die Ableitung der Verteilungsfunktion $F(x)$}
+	
+	\subsubheading{Verteilungsfunktion}
+	\ccontent{Eine Verteilungsfunktion ist eine Funktion $F$, die jedem $x$ einer Zufallsvariable $X$ genau eine Wahrscheinlichkeit $P(X \leq x)$ zuordnet}
+	\ccontent{ $F(x) \to P(X \leq x)$}
+	\ccontent{Bedingungen der Verteilungsfunktion}
+	\ccontent{Die Verteilungsfunktion \textbf{muss} stetig sein}
+	\ccontent{Die Verteilungsfunktion \textbf{muss} monoton steigend sein}
+	\ccontent{ $\lim \limits_{x \to \infty} F(x) = 1$}
+	\ccontent{ $\lim \limits_{x \to -\infty} F(x) = 0$}
+	
 	\subsubheading{Normalverteilung}
 	\ccontent{ $X \sim N(\mu, \sigma^2)$}
 	\ccontent{ Ist $X \sim N(0, 1)$ dann heißt sie Standardnormalverteilt}
@@ -339,6 +359,12 @@
 	\ccontent{ $\sum X_i \sim N(n \cdot \mu, n \cdot \sigma^2)$}
 	\ccontent{ $\frac{1}{n} \sum \limits_{i=1}^n = \bar{x} \sim N(\mu, \frac{\sigma^2}{n}$}
 	\ccontent{ Manche Verteilungen verhalten sich in der Summe anders, zum Beispiel die Rechteckverteilung ist nicht mehr R-Verteilt. Dann wird der Zentrale Grenzwertsatz verwendet}
+	
+	\heading{Induktive Statistik - Schätztheorie}
+	\subheading{Konfidenzintervalle}
+	
+	\subsubheading{Intervall für $E(X)$ einer Normalverteilung}
+	\ccontent{ $Z = \frac{\bar{X} - \mu}{\frac{\sigma}{\sqrt{n}}} \sim N(0,1)$}
 
 	\heading{Allgemeine Matheregeln}
 	\subheading{Ableitungen und Integrale}
@@ -395,7 +421,7 @@
 		\cline{1-2}
 		$f(x)$                  & $F(x)$                                  \\
 		\cline{1-2}
-		$x^n, n \neq 1$         & $\frac{1}{n-1} \cdot x^{n+1} + c$       \\
+		$x^n, n \neq 1$         & $\frac{1}{n+1} \cdot x^{n+1} + c$       \\
 		\cline{1-2}
 		$\frac{1}{x}, x \neq 0$ & $\vert \ln x \vert + c$                 \\
 		\cline{1-2}
