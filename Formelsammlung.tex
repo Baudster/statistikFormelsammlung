@@ -209,6 +209,8 @@
 	\ccontent{ $P(X > k) = 1 - P(X \leq k)$}
 	\ccontent{ Eingabe Taschenrechner}
 	\ccontent{ $\binom{n}{k} \, \widehat{=} \, n \, \vert nCr \vert \, k$}
+	
+	\subsubheading{Binomialverteilung approximieren}
 	\ccontent{ Die Binomialverteilung kann mit der Normalverteilung approximiert werden, \textbf{bedingung ist}}
 	\ccontent{ $X \sim B(n, p) \stackrel{a}{=} N(n \cdot p, n \cdot p \cdot (1-p))$}
 	\ccontent{ falls gilt}
@@ -225,6 +227,10 @@
 	\ccontent{ $P(X = k) = \frac{\binom{M}{k} \cdot \binom{N-M}{n-k}}{\binom{N}{n}} $}
 	\ccontent{ $P(X \leq k) = \sum \limits_{i=0}^k \frac{\binom{M}{i} \cdot \binom{N-M}{n-i}}{\binom{N}{n}} $}
 	\ccontent{ $P(X > k) = 1 - P(X \leq k)$}
+	
+	\subheading{Hypergeometrische Vert. apporximieren}
+	\ccontent{Die hypergeometrische Verteilung kann mit der \textbf{Binomialverteilung} approximiert werden. Dabei muss folgende Bedingung gelten}
+	\ccontent{ $\frac{n}{N} < 0,05$}
 
 	\subsubheading{Poisson Verteilung}
 	\ccontent{ Schlüsselwörter sind \textbf{Ereignisse pro Zeiteinheit}, zum Beispiel Anrufe innerhalb bestimmter Zeitspanne}
@@ -366,11 +372,37 @@
 	
 	\heading{Induktive Statistik - Schätztheorie}
 	\subheading{Konfidenzintervalle}
-	
 	\subsubheading{Intervall für $E(X)$ einer Normalverteilung}
-	\ccontent{ $Z = \frac{\bar{X} - \mu}{\frac{\sigma}{\sqrt{n}}} \sim N(0,1)$}
+	\subsubheading{Bei bekannter Standardabweicheung}
+	\ccontent{Ist $X \sim N(\mu, \sigma^2)$ verteilt, dann ist}
+	\ccontent{$Z = \frac{\bar{X} - \mu}{\sigma / \sqrt{n}} \sim N(0,1)$}
+	\ccontent{$\bar{X} = $ erwartungsstreuer Schätzer bei $n$ unabhängigen Stichproben}
+	\ccontent{Ist $\alpha$ gegegeben, berechne das Quantil $z_{1-(\alpha / 2)}$}
+	\ccontent{ Daraus erhält man das Konfidenzintervall}
+	\ccontent{$\left[\bar{x} - z_{1-(\alpha / 2)} \cdot \frac{\sigma}{\sqrt{n}}, \bar{x} + z_{1-(\alpha / 2)} \cdot \frac{\sigma}{\sqrt{n}}\right]$}
 
 	\heading{Allgemeine Matheregeln}
+	\subheading{Potenzen und Logarithmen}
+	
+	\subsubheading{Potenzgesetze}
+	\ccontent{$a^0 = 1$}
+	\ccontent{$a^1 = a$}
+	\ccontent{$a^m \cdot a^n = a^{m+n}$}
+	\ccontent{$(a^n)^m = a^{n \cdot m}$}
+	\ccontent{$a^n \cdot b^n = (a \cdot b)^n$}
+	\ccontent{$a^{-n} = \frac{1}{n}$}
+	\ccontent{$\frac{a^n}{a^m} = a^{n-m}$}
+	\ccontent{$a^\frac{b}{n} = \sqrt[n]{b}$}
+	
+	\subsubheading{Logarithmusregeln}
+	\ccontent{$x = \log_{a}{y} \Leftrightarrow y = a^x$}
+	\ccontent{$\log{1} = 0$}
+	\ccontent{$\log{x \cdot y} = \log{x} + \log{y}$}
+	\ccontent{$- \log{x} = \log{\frac{1}{x}}$}
+	\ccontent{$\log{\frac{x}{y}} = \log{x} - \log{y}$}
+	\ccontent{$\log{x^n} = n \cdot \log{x}$}
+	\ccontent{$\log_{a}{x} = \frac{\log{x}} {\log{a}}$}
+	
 	\subheading{Ableitungen und Integrale}
 
 	\subsubheading{Grundlegende Ableitungsregeln}
