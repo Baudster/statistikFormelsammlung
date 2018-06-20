@@ -30,7 +30,8 @@
     \usepackage{pifont}
     \usepackage{wrapfig}
     \usepackage[T1]{fontenc}
-    
+    \usepackage{parskip}
+ 
     
     % Header
     \pagestyle{fancy}
@@ -72,6 +73,7 @@
     \newcommand{\subheading}[1]{\noindent\subsection*{\framebox[\columnwidth][l]{#1}}}
     \newcommand{\subsubheading}[1]{\noindent\framebox[\columnwidth][l]{#1}}
     \newcommand{\ccontent}[1]{\parbox{\columnwidth}{\centering{#1}}}
+    
 	
     % Content 
 \begin{document}
@@ -82,18 +84,22 @@
 
 	\subsubheading{Arithmetisches Mittel}
 	\ccontent{$\bar{x}=\frac{1}{n}\sum \limits_{i=1}^n x_i=\frac{1}{n}(x_1 + \dots + a_n)$}
+	\ccontent{Das Arithmetische Mittel $\bar{x}$ minimiert die Funktion}
+	\ccontent{ $g(t) = \sum \limits_{i=1}^{n} (x_i - t)^2$}
 
 	\subsubheading{Geometrisches Mittel}
 	\ccontent{$\bar{x}_{geom} = \sqrt[n]{x_1 \cdot x_2 \cdot \dots \cdot x_n}$}
 
 	\subsubheading{Median}
-	\ccontent{\[\tilde{x}=\begin{cases}x_{\frac{n+1}{2}}, ungerade \\\frac{1}{2}(x_{\frac{n}{2}}+x_{\frac{n}{2}+1}), gerade \end{cases}\]}
+	\ccontent{$\tilde{x} = \begin{cases} x_\frac{n+1}{2} \\ \frac{1}{2} \cdot (x_\frac{n}{2} + x_\frac{n+1}{2}) \end{cases}$ $\begin{array}{l} , ungerade \\ , gerade \end{array}$}
 	Der Median $\tilde{x}$ minimiert die Funktion
-	\ccontent{$\sum \limits_{i=1}^n \vert x_i- \bar{x} \vert$}
+	\ccontent{$g(t) = \sum \limits_{i=1}^n \vert x_i - t \vert$}
 
 	\subheading{Streungsmaße}
 	\subsubheading{(empirische) Varianz}
 	\ccontent{$var = \sigma^2 = {s_n}^2 = \frac{1}{n-1} \sum \limits_{i=1}^n(x_i-\bar{x})^2$}
+	\ccontent{alternativ}
+	\ccontent{$var = \sigma^2 = \frac{n}{n-1} \cdot (\overline{x^2} - \bar{x}^2)$}
 
 	\subsubheading{Standardabweichung}
 	\ccontent{$\sigma = s_n = \sqrt{\sigma^2}$}
@@ -106,6 +112,8 @@
 	\subheading{Kovarianz und Korrelationskoeffizient}
 	\subsubheading{Kovarianz}
 	\ccontent{$cov(x,y) = S_{xy} = \frac{1}{n-1}\sum \limits_{i=1}^n(x_i-\bar{x})\cdot(y_i-\bar{y})$}
+	\ccontent{alternativ}
+	\ccontent{$cov(x,y) = S_{xy} = \frac{1}{n-1}\sum \limits_{i=1}^{n} (x_i \cdot y_i - n \cdot \bar{x} \cdot \bar{y})$}
 
 	\subsubheading{Korrelationskoeffizent}
 	\ccontent{$r_{xy} = \frac{S_{xy}}{S_x \cdot S_y}$}
@@ -124,12 +132,12 @@
 
 	\subsubheading{Kleinste quadratische Abweichung}
 	\ccontent{ Die Parameter $a, b, c, ...$ werden so gewählt, dass}
-	\ccontent{ $Q(a,b,c,...) = \sum \limits_{i=1}^n (y_i - f_{a,b,c,...}(x_i))^2$}
+	\ccontent{ $Q(a,b,c,...) = \sum \limits_{i=1}^n (f_{a,b,c,...}(x_i) - y_i)^2$}
 	\ccontent{ minimal ist}
 	\ccontent{ $f_{a,b,c...}(x_i)$ ist die Funktion dessen Parameter gesucht werden}
 	\ccontent{ Nullsetzen der partiellen Ableitungen:}
-	\ccontent{ $\frac{\delta}{\delta a} Q(a,b) = 0 $}
-	\ccontent{ $\frac{\delta}{\delta b} Q(a,b) = 0 $}
+	\ccontent{ $\frac{\partial}{\partial a} Q(a,b) = 0 $}
+	\ccontent{ $\frac{\partial}{\partial b} Q(a,b) = 0 $}
 	\ccontent{ Über die Ableitungen lassen sich die Parameter finden welche die vorgegebene Funktion am besten annähern}
 	
 	\subsubheading{ Vergleich ermittelter Kurven}
@@ -186,10 +194,11 @@
 	\ccontent{ $P(A \cap B) = P(A \vert B) \cdot P(B) = P(B \vert A) \cdot P(A)$}
 	\ccontent{ $P(A \cup B) = P(A) + P(B) - P(A \cap B)$}
 	\ccontent{ $P(\bar{A}) = 1 - P(A)$}
-	\ccontent{ $P(\bar{A \cup B}) = P(\bar{A} \cap \bar{B})$}
-	\ccontent{ $P(\bar{A \cap B}) = P(\bar{A} \cup \bar{B})$}
+	\ccontent{ $P(\overline{A \cup B}) = P(\bar{A} \cap \bar{B})$}
+	\ccontent{ $P(\overline{A \cap B}) = P(\bar{A} \cup \bar{B})$}
 	\ccontent{ Wenn A und B unabhängig, dann gilt}
 	\ccontent{ $P(A \cap B) = P(A) \cdot P(B)$}
+	\ccontent{ $P(A \vert B) = P(A)$}
 
 	\subheading{Zufallsvariablen}
 	\ccontent{ Eine Zufallsvariable ist eine Zuordnungsvorschrift die jedem  möglichen Ergebnis eines Zufallsexperiments eine Größe zuordnet}
@@ -211,12 +220,16 @@
 	\ccontent{ $\binom{n}{k} \, \widehat{=} \, n \, \vert nCr \vert \, k$}
 	
 	\subsubheading{Binomialverteilung approximieren}
-	\ccontent{ Die Binomialverteilung kann mit der Normalverteilung approximiert werden, \textbf{bedingung ist}}
-	\ccontent{ $X \sim B(n, p) \stackrel{a}{=} N(n \cdot p, n \cdot p \cdot (1-p))$}
-	\ccontent{ falls gilt}
-	\ccontent{ $n \cdot p \cdot (1-p) > 9$}
 	\ccontent{ Die Binomialverteilung kann mit der Poisson Verteilung approximiert werden, dann gilt}
 	\ccontent{ $\lambda = n \cdot p$}
+	\ccontent{ Die Binomialverteilung kann auch mit der Normalverteilung approximiert werden, \textbf{bedingung ist}}
+	\ccontent{ $X \sim B(n, p) \approx N(n \cdot p, n \cdot p \cdot (1-p))$}
+	\ccontent{ falls gilt}
+	\ccontent{ $n \cdot p \cdot (1-p) > 9$}
+	\ccontent{Bei der approximation mit der Normalverteilung kann man eine Stetigkeitskorrektur verwenden um ein besseres Ergebnis zu erhalten}
+	\ccontent{$P(X \leq k) \approx F_N(R + 0,5)$}
+	\ccontent{$P(X < k) \approx F_N(R - 0,5)$}
+	\ccontent{$P(a \leq X \leq b) \approx F_N(b + 0,5) - F_N(a-0,5$}
 
 	\subsubheading{Hypergeometrische Verteilung}
 	\ccontent{ Ohne zurücklegen, Wahrscheinlichkeit ändert sich nach jedem Ereignis}
@@ -239,7 +252,7 @@
 
 	\subsubheading{Geometrische Verteilung}
 	\ccontent{ $X \sim Geom(n, p)$}
-	\ccontent{ $P(X = n) = (1-p)^{n-1} \cdot p^n$}
+	\ccontent{ $P(X = n) = (1-p)^{n-1} \cdot p$}
 	\ccontent{ Beispiel: Ein Würfel wird so lange gewürfelt bis eine 6 Auftritt. Die Zufallsvariable X ist gleich Anzahl der Würfe}
 
 	\subheading{Stetige Verteilungen}
@@ -274,6 +287,7 @@
 	\ccontent{ allgemein gilt}
 	\ccontent{ $X \sim N (\mu, \sigma^2)$}
 	\ccontent{ $P(X \leq k) = \Phi(\frac{k-\mu}{\sigma})$}
+	\ccontent{ $P(a \leq X \leq b) = \Phi(\frac{b-\mu}{\sigma}) - \Phi(\frac{a-\mu}{\sigma})$}
 
 	\subsubheading{Quantile der Normalverteilung}
 	\ccontent{ Tabelliert ist das $\beta-$Quantil $z_\beta$ der Normalverteilung $N(0,1)$}
@@ -284,11 +298,15 @@
 	
 	\subsubheading{Exponentialverteilung}
 	\ccontent{ Eine exponentialverteilte Zufallsvariable T hat die Dichte}
-	\ccontent{ \[f(t) = \begin{cases} \lambda \cdot e^{- \lambda \cdot t}, t \geq 0 \\ 0, t < 0 \end{cases}\]}
+	\ccontent{ $f(t) = \begin{cases} \lambda \cdot e^{- \lambda \cdot t} \\ 0 \end{cases}$ $\begin{array}{l} , t \geq 0 \\ , t < 0 \end{array}$}
 	\ccontent{ und daraus eribt sich die Verteilungsfunktion}
 	\ccontent{ $ F(x) = P(T \leq x) = $}
-	\ccontent{ \[= \int_{-\infty}^{x} f(t)dt = \begin{cases} 1 - e^{- \lambda \cdot x}, x \geq 0 \\ 0, x < 0 \end{cases}\]}
+	\ccontent{ $ = \int_{-\infty}^{x} f(t)dt = \begin{cases} 1 - e^{- \lambda \cdot x}\\ 0\end{cases}$ $\begin{array}{l} , x \geq 0 \\ , x < 0\end{array}$}
 	\ccontent{ Die Exponentialverteilung ist Gedächtnislos}
+	
+	\subsubheading{Gleichverteilung(Rechteckverteilung)}
+	\ccontent{$f(t) = \begin{cases} \frac{1}{b-a} \\ 0 \end{cases}$ $\begin{array}{l}, t \in [a, b] \\ , sonst \end{array}$}
+	\ccontent{$F(t) = \begin{cases} 0 \\ \frac{t-a}{b-a} \\ 1 \end{cases}$ $\begin{array}{l} , t < a \\, t \in [a, b] \\, t > b \end{array}$}
 	
 	\subheading{Erwartungswert und Varianz}
 	\subsubheading{\textbf{Erwartungswert}}	
@@ -356,7 +374,7 @@
 	\subsubheading{\textbf{Unabhängiger Zufallsvariablen}}
 
 	\subsubheading{Allgemeine Regeln}
-	\ccontent{ $E(X \cdot Y = E(X) \cdot E(Y)$}
+	\ccontent{ $E(X \cdot Y) = E(X) \cdot E(Y)$}
 	\ccontent{ $Var(X + Y) = Var(X) + Var(Y)$}
 	
 	\subheading{Wichtige Sätze der Stochastik}
@@ -371,6 +389,15 @@
 	\ccontent{ Manche Verteilungen verhalten sich in der Summe anders, zum Beispiel die Rechteckverteilung ist nicht mehr R-Verteilt. Dann wird der Zentrale Grenzwertsatz verwendet}
 	
 	\heading{Induktive Statistik - Schätztheorie}
+	\subheading{Schätzfunktionen}
+	
+	\subsubheading{Maximum-Likelihood-Schätzer}
+	\ccontent{$L(x_1, \dots , x_n, \alpha) = \prod \limits_{i=1}^n f(x_i)$}
+	\ccontent{$f(x_i)$ muss eine Dichtefunktion sein}
+	\ccontent{$ \frac{\partial \ln{L(x_1, \dots , x_n, \alpha)}}{\partial \alpha} = 0$}
+	\ccontent{Die Funktion nach dem Parameter $\alpha$ ableiten und Nullsetzen}
+	\ccontent{Das Ergebnis ist der Maximum-Likelihood-Schätzer}
+	
 	\subheading{Konfidenzintervalle}
 	\subsubheading{Intervall für $E(X)$ einer Normalverteilung}
 	\subsubheading{Bei bekannter Standardabweicheung}
@@ -385,23 +412,48 @@
 	\subheading{Potenzen und Logarithmen}
 	
 	\subsubheading{Potenzgesetze}
-	\ccontent{$a^0 = 1$}
-	\ccontent{$a^1 = a$}
-	\ccontent{$a^m \cdot a^n = a^{m+n}$}
-	\ccontent{$(a^n)^m = a^{n \cdot m}$}
-	\ccontent{$a^n \cdot b^n = (a \cdot b)^n$}
-	\ccontent{$a^{-n} = \frac{1}{n}$}
-	\ccontent{$\frac{a^n}{a^m} = a^{n-m}$}
-	\ccontent{$a^\frac{b}{n} = \sqrt[n]{b}$}
+	\def\arraystretch{1.}%
+	\begin{tabularx}{\columnwidth}{|X|}
+		\cline{1-1}
+		\begin{center}$a^0 = 1$\end{center}															\\
+		\cline{1-1}
+		\begin{center}$a^1 = a$\end{center}															\\
+		\cline{1-1}
+		\begin{center}$a^m \cdot a^n = a^{m+n}$\end{center}											\\
+		\cline{1-1}
+		\begin{center}$(a^n)^m = a^{n \cdot m}$\end{center}											\\
+		\cline{1-1}
+		\begin{center}$a^n \cdot b^n = (a \cdot b)^n$\end{center}									\\
+		\cline{1-1}
+		\begin{center}$\frac{a^n}{a^m} = a^{n-m}$\end{center}										\\
+		\cline{1-1}
+		\begin{center}$a^\frac{b}{n} = \sqrt[n]{b}$\end{center}										\\
+		\cline{1-1}
+		\begin{center}$\prod \limits_{i=1}^n a^{x_i} = a^{\sum \limits_{i=1}^n x_i}$\end{center}	\\
+		\cline{1-1}
+	\end{tabularx}
 	
 	\subsubheading{Logarithmusregeln}
-	\ccontent{$x = \log_{a}{y} \Leftrightarrow y = a^x$}
-	\ccontent{$\log{1} = 0$}
-	\ccontent{$\log{x \cdot y} = \log{x} + \log{y}$}
-	\ccontent{$- \log{x} = \log{\frac{1}{x}}$}
-	\ccontent{$\log{\frac{x}{y}} = \log{x} - \log{y}$}
-	\ccontent{$\log{x^n} = n \cdot \log{x}$}
-	\ccontent{$\log_{a}{x} = \frac{\log{x}} {\log{a}}$}
+	\def\arraystretch{1.}%
+	\begin{tabularx}{\columnwidth}{|X|}
+		\cline{1-1}
+		\begin{center}$x = \log_{a}{y} \Leftrightarrow y = a^x$\end{center}	\\
+		\cline{1-1}
+		\begin{center}$\log{1} = 0$\end{center}								\\
+		\cline{1-1}
+		\begin{center}$\log{x \cdot y} = \log{x} + \log{y}$\end{center}		\\
+		\cline{1-1}
+		\begin{center}$- \log{x} = \log{\frac{1}{x}}$\end{center}			\\
+		\cline{1-1}
+		\begin{center}$\log{\frac{x}{y}} = \log{x} - \log{y}$\end{center}	\\
+		\cline{1-1}
+		\begin{center}$\log{x^n} = n \cdot \log{x}$\end{center}				\\
+		\cline{1-1}
+		\begin{center}$\log_{a}{x} = \frac{\log{x}} {\log{a}}$\end{center}	\\
+		\cline{1-1}
+		\begin{center}$\log{(\prod \limits_{i=1}^n x_i)} = \sum \limits_{i=1}^n \log{x_i}$\end{center} \\
+		\cline{1-1}
+	\end{tabularx}
 	
 	\subheading{Ableitungen und Integrale}
 
@@ -447,7 +499,7 @@
 		\cline{1-2}
 		$\frac{f(x)}{g(x)}$ & $\frac{(f'(x) \cdot g(x)) - (f(x) \cdot g'(x))}{g(x)^2}$ \\
 		\cline{1-2}
-		$[f(g(x)]$          & $f'(g(x)) \cdot g'(x)$                                   \\
+		$f(g(x))$          & $f'(g(x)) \cdot g'(x)$                                    \\
 		\cline{1-2}
 	\end{tabularx}
 
@@ -459,7 +511,7 @@
 		\cline{1-2}
 		$x^n, n \neq 1$         & $\frac{1}{n+1} \cdot x^{n+1} + c$       \\
 		\cline{1-2}
-		$\frac{1}{x}, x \neq 0$ & $\vert \ln x \vert + c$                 \\
+		$\frac{1}{x}, x \neq 0$ & $\ln \vert x \vert + c$                 \\
 		\cline{1-2}
 		$\sqrt{x}$              & $\frac{2}{3} \cdot x^{\frac{3}{2}} + c$ \\
 		\cline{1-2}
