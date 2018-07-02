@@ -228,7 +228,7 @@
 	\ccontent{Bei der approximation mit der Normalverteilung kann man eine Stetigkeitskorrektur verwenden um ein besseres Ergebnis zu erhalten}
 	\ccontent{$P(X \leq k) \approx F_N(R + 0,5)$}
 	\ccontent{$P(X < k) \approx F_N(R - 0,5)$}
-	\ccontent{$P(a \leq X \leq b) \approx F_N(b + 0,5) - F_N(a-0,5$}
+	\ccontent{$P(a \leq X \leq b) \approx F_N(b + 0,5) - F_N(a-0,5)$}
 
 	\subsubheading{Hypergeometrische Verteilung}
 	\ccontent{ Ohne zurücklegen, Wahrscheinlichkeit ändert sich nach jedem Ereignis}
@@ -348,6 +348,7 @@
 
 	\subsubheading{Zufallsvariable mit Dichtefunktion $f$}
 	\ccontent{ $Var(X) = E(X^2) - (E(X))^2$}
+	\ccontent{ wobei $E(x^2) = \int_{-\infty}^{+\infty} x^2 \cdot f(x) dx$ }
 	
 	\subsubheading{Exponentialverteilung mit Zufallsvariable T}
 	\ccontent{ $Var(T) = \frac{1}{\lambda^2}$}
@@ -384,7 +385,7 @@
 	\ccontent{ $E(X_i) = \mu$}
 	\ccontent{ $Var(X_i) = \sigma^2$}
 	\ccontent{ $\sum X_i \sim N(n \cdot \mu, n \cdot \sigma^2)$}
-	\ccontent{ $\frac{1}{n} \sum \limits_{i=1}^n = \bar{x} \sim N(\mu, \frac{\sigma^2}{n}$}
+	\ccontent{ $\frac{1}{n} \sum \limits_{i=1}^n = \bar{x} \sim N(\mu, \frac{\sigma^2}{n})$}
 	\ccontent{ Manche Verteilungen verhalten sich in der Summe anders, zum Beispiel die Rechteckverteilung ist nicht mehr R-Verteilt. Dann wird der Zentrale Grenzwertsatz verwendet}
 	
 	\heading{Induktive Statistik - Schätztheorie}
@@ -392,10 +393,10 @@
 	
 	\subsubheading{Maximum-Likelihood-Schätzer}
 	\ccontent{$L(x_1, \dots , x_n, \alpha) = \prod \limits_{i=1}^n f(x_i)$}
-	\ccontent{$f(x_i)$ muss eine Dichtefunktion sein}
+	\ccontent{$f(x_i)$ muss eine Dichtefunktion sein $\Rightarrow$ Wenn $F(x)$ gegeben erst ableiten! }
 	\ccontent{$ \frac{\partial \ln{L(x_1, \dots , x_n, \alpha)}}{\partial \alpha} = 0$}
-	\ccontent{Die Funktion nach dem Parameter $\alpha$ ableiten und Nullsetzen}
-	\ccontent{Das Ergebnis ist der Maximum-Likelihood-Schätzer}
+	\ccontent{ Die Funktion nach dem Parameter $\alpha$ ableiten und Nullsetzen \\ 
+	           Das Ergebnis ist der Maximum-Likelihood-Schätzer}
 	
 	\subheading{Konfidenzintervalle}
 	\subsubheading{Intervall für $E(X)$ einer Normalverteilung}
