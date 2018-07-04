@@ -228,7 +228,7 @@
 	\ccontent{Bei der approximation mit der Normalverteilung kann man eine Stetigkeitskorrektur verwenden um ein besseres Ergebnis zu erhalten}
 	\ccontent{$P(X \leq k) \approx F_N(R + 0,5)$}
 	\ccontent{$P(X < k) \approx F_N(R - 0,5)$}
-	\ccontent{$P(a \leq X \leq b) \approx F_N(b + 0,5) - F_N(a-0,5)$}
+	\ccontent{$P(a \leq X \leq b) \approx F_N(b + 0,5) - F_N(a-0,5$}
 
 	\subsubheading{Hypergeometrische Verteilung}
 	\ccontent{ Ohne zurücklegen, Wahrscheinlichkeit ändert sich nach jedem Ereignis}
@@ -348,7 +348,6 @@
 
 	\subsubheading{Zufallsvariable mit Dichtefunktion $f$}
 	\ccontent{ $Var(X) = E(X^2) - (E(X))^2$}
-	\ccontent{ wobei $E(x^2) = \int_{-\infty}^{+\infty} x^2 \cdot f(x) dx$ }
 	
 	\subsubheading{Exponentialverteilung mit Zufallsvariable T}
 	\ccontent{ $Var(T) = \frac{1}{\lambda^2}$}
@@ -374,6 +373,7 @@
 	\subsubheading{\textbf{Unabhängiger Zufallsvariablen}}
 
 	\subsubheading{Allgemeine Regeln}
+	\ccontent{ $Var(X + 3) = Var(X)$}
 	\ccontent{ $E(X \cdot Y) = E(X) \cdot E(Y)$}
 	\ccontent{ $Var(X + Y) = Var(X) + Var(Y)$}
 	
@@ -385,7 +385,7 @@
 	\ccontent{ $E(X_i) = \mu$}
 	\ccontent{ $Var(X_i) = \sigma^2$}
 	\ccontent{ $\sum X_i \sim N(n \cdot \mu, n \cdot \sigma^2)$}
-	\ccontent{ $\frac{1}{n} \sum \limits_{i=1}^n = \bar{x} \sim N(\mu, \frac{\sigma^2}{n})$}
+	\ccontent{ $\frac{1}{n} \sum \limits_{i=1}^n = \bar{x} \sim N(\mu, \frac{\sigma^2}{n}$}
 	\ccontent{ Manche Verteilungen verhalten sich in der Summe anders, zum Beispiel die Rechteckverteilung ist nicht mehr R-Verteilt. Dann wird der Zentrale Grenzwertsatz verwendet}
 	
 	\heading{Induktive Statistik - Schätztheorie}
@@ -393,25 +393,33 @@
 	
 	\subsubheading{Maximum-Likelihood-Schätzer}
 	\ccontent{$L(x_1, \dots , x_n, \alpha) = \prod \limits_{i=1}^n f(x_i)$}
-	\ccontent{$f(x_i)$ muss eine Dichtefunktion sein $\Rightarrow$ Wenn $F(x)$ gegeben erst ableiten! }
+	\ccontent{$f(x_i)$ muss eine Dichtefunktion sein}
 	\ccontent{$ \frac{\partial \ln{L(x_1, \dots , x_n, \alpha)}}{\partial \alpha} = 0$}
-	\ccontent{ Die Funktion nach dem Parameter $\alpha$ ableiten und Nullsetzen \\ 
-	           Das Ergebnis ist der Maximum-Likelihood-Schätzer}
+	\ccontent{Die Funktion nach dem Parameter $\alpha$ ableiten und Nullsetzen}
+	\ccontent{Das Ergebnis ist der Maximum-Likelihood-Schätzer}
 	
 	\subheading{Konfidenzintervalle}
 	\subsubheading{Intervall für $E(X)$ einer Normalverteilung}
-	\subsubheading{Bei bekannter Standardabweicheung}
 	\ccontent{Ist $X \sim N(\mu, \sigma^2)$ verteilt, dann ist}
 	\ccontent{$Z = \frac{\bar{X} - \mu}{\sigma / \sqrt{n}} \sim N(0,1)$}
-	\ccontent{$\bar{X} = $ erwartungsstreuer Schätzer bei $n$ unabhängigen Stichproben}
-	\ccontent{Ist $\alpha$ gegegeben, berechne das Quantil $z_{1-(\alpha / 2)}$}
-	\ccontent{ Daraus erhält man das Konfidenzintervall}
+	\subsubheading{Bei \textbf{bekannter} Standardabweicheung $\sigma$}
 	\ccontent{$\left[\bar{x} - z_{1-(\alpha / 2)} \cdot \frac{\sigma}{\sqrt{n}}, \bar{x} + z_{1-(\alpha / 2)} \cdot \frac{\sigma}{\sqrt{n}}\right]$}
+	\ccontent{$\bar{X} = $ arithmetisches Mittel, bzw erwartungsstreuer Schätzer bei $n$ unabhängigen Stichproben}
+	\ccontent{$\alpha = $ Signifikanzwahrscheinlichkeit (Irrtumswahrscheinlichkeit)}
+	\ccontent{$1-\alpha = $ Vertrauensniveau}
+	\ccontent{Ist $\alpha$ gegegeben, berechne das Quantil $z_{1-(\alpha / 2)}$}
+	\subsubheading{Bei \textbf{unbekannter} Standardabweicheung $\sigma$}
+	\ccontent{$\left[\bar{x} - t_{1-(\alpha / 2)} \cdot \frac{s}{\sqrt{n}}, \bar{x} + t_{1-(\alpha / 2)} \cdot \frac{s}{\sqrt{n}}\right]$}
+	\ccontent{Anstatt $\sigma^2$ wird der erwartungstreue Schätzer $s$ verwendet}
+	\ccontent{ $s^2 = \frac{1}{n-1} \sum \limits_{i=1}^n(X_i - \bar{X})^2$}
+	\ccontent{ bzw }
+	\ccontent{ $s = \sqrt{\frac{1}{n-1} \sum \limits_{i=1}^n(X_i - \bar{X})^2}$}
 
 	\heading{Kapitel 5}
-	\subheading{Unterkapitel}
-	\subsubheading{$\chi^2$ - Test}
-	\ccontent{$ blabla$}
+	\subheading{Tests für Streuungsmaße}
+	\subsubheading{$\chi^2$ - Anpassungstest}
+	\ccontent{$ y = \frac{1}{n}(\sum \limits_{i=1}^r \frac{{h_i}^2}{p_i}) - n$}
+	\ccontent{ Das Ergebnis mit $\chi^2_{r-1;1-\frac{P_i}{2}}$ Wert aus der Tabelle vergleichen (erwarteter Wert)}
 	
 	\heading{Allgemeine Matheregeln}
 	\subheading{Potenzen und Logarithmen}
@@ -463,35 +471,32 @@
 	\subheading{Ableitungen und Integrale}
 
 	\subsubheading{Grundlegende Ableitungsregeln}
-	\ccontent{$c \stackrel{!}{=} const$} 
 	\def\arraystretch{1.5}% 
 	\begin{tabularx}{\columnwidth}{|X|X|}
 		\cline{1-2}
-		$f(x)$          & $f'(x)$                    \\
+		$f(x)$      & $f'(x)$                    \\
 		\cline{1-2}
-		$c$		        & $0$                        \\
+		$c = const$ & $0$                        \\
 		\cline{1-2}
-		$f(x) \cdot c$	& $f'(x) \cdot c$            \\
+		$x^n$       & $n \cdot x^{n-1}$          \\
 		\cline{1-2}
-		$x^n$           & $n \cdot x^{n-1}$          \\
+		$\sqrt{x}$  & $\frac{1}{2\sqrt{x}}$      \\
 		\cline{1-2}
-		$\sqrt{x}$      & $\frac{1}{2\sqrt{x}}$      \\
+		$e^x$       & $e^x$                      \\
 		\cline{1-2}
-		$e^x$           & $e^x$                      \\
+		$a^x$       & $\ln a \cdot a^x$          \\
 		\cline{1-2}
-		$a^x$           & $\ln a \cdot a^x$          \\
+		$\ln x$     & $\frac{1}{x}$              \\
 		\cline{1-2}
-		$\ln x$         & $\frac{1}{x}$              \\
+		$\log_a x$  & $\frac{1}{\ln  a \cdot x}$ \\
 		\cline{1-2}
-		$\log_a x$      & $\frac{1}{\ln  a \cdot x}$ \\
+		$\sin{x}$   & $\cos{x}$                  \\
 		\cline{1-2}
-		$\sin{x}$       & $\cos{x}$                  \\
+		$\cos{x}$   & $-\sin{x}$                 \\
 		\cline{1-2}
-		$\cos{x}$       & $-\sin{x}$                 \\
+		$\tan{x}$   & $\frac{1}{\cos^2{x}}$      \\
 		\cline{1-2}
-		$\tan{x}$       & $\frac{1}{\cos^2{x}}$      \\
-		\cline{1-2}
-		$\cot{x}$       & $\frac{1}{\sin^2{x}}$      \\
+		$\cot{x}$   & $\frac{1}{\sin^2{x}}$      \\
 		\cline{1-2}
 	\end{tabularx}
 
