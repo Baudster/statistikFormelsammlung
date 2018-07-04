@@ -332,7 +332,7 @@
 	\subsubheading{Für Hypergeometrischeverteilung}
 	\ccontent{ $E(S_n) = E(X_1 + ... + X_n) = n \cdot E(X_1) = n \cdot \frac{M}{N}$}
 	
-	\subsubheading{Für Rechteckverteilung}
+	\subsubheading{Für Gleichverteilung(Rechteckverteilung)}
 	\ccontent{ $E(T_i) = \frac{a+b}{2}$}
 
 	\subsubheading{Allgemeine Regeln für den Erwartungswert}
@@ -364,7 +364,7 @@
 	\subsubheading{Für Hypergeometrischeverteilung}
 	\ccontent{ $Var(S_n) = n \cdot \frac{M}{N} \cdot (1 - \frac{M}{N}) \cdot \frac{N-n}{N-1}$}
 	
-	\subsubheading{Für Rechteckverteilung}
+	\subsubheading{Für Gleichverteilung(Rechteckverteilung)}
 	\ccontent{$ Var(T_i) = \frac{(b-a)^2}{12}$}
 
 	\subsubheading{Allgemeine Regeln für Varianz}
@@ -373,7 +373,7 @@
 	\subsubheading{\textbf{Unabhängiger Zufallsvariablen}}
 
 	\subsubheading{Allgemeine Regeln}
-	\ccontent{ $Var(X + 3) = Var(X)$}
+	\ccontent{ $Var(X + const) = Var(X)$}
 	\ccontent{ $E(X \cdot Y) = E(X) \cdot E(Y)$}
 	\ccontent{ $Var(X + Y) = Var(X) + Var(Y)$}
 	
@@ -408,18 +408,23 @@
 	\ccontent{$\alpha = $ Signifikanzwahrscheinlichkeit (Irrtumswahrscheinlichkeit)}
 	\ccontent{$1-\alpha = $ Vertrauensniveau}
 	\ccontent{Ist $\alpha$ gegegeben, berechne das Quantil $z_{1-(\alpha / 2)}$}
+	
 	\subsubheading{Bei \textbf{unbekannter} Standardabweicheung $\sigma$}
 	\ccontent{$\left[\bar{x} - t_{1-(\alpha / 2)} \cdot \frac{s}{\sqrt{n}}, \bar{x} + t_{1-(\alpha / 2)} \cdot \frac{s}{\sqrt{n}}\right]$}
 	\ccontent{Anstatt $\sigma^2$ wird der erwartungstreue Schätzer $s$ verwendet}
 	\ccontent{ $s^2 = \frac{1}{n-1} \sum \limits_{i=1}^n(X_i - \bar{X})^2$}
-	\ccontent{ bzw }
+	\ccontent{ beziehungsweise }
 	\ccontent{ $s = \sqrt{\frac{1}{n-1} \sum \limits_{i=1}^n(X_i - \bar{X})^2}$}
 
 	\heading{Kapitel 5}
-	\subheading{Tests für Streuungsmaße}
+	\subheading{Hypothesentests}
 	\subsubheading{$\chi^2$ - Anpassungstest}
-	\ccontent{$ y = \frac{1}{n}(\sum \limits_{i=1}^r \frac{{h_i}^2}{p_i}) - n$}
-	\ccontent{ Das Ergebnis mit $\chi^2_{r-1;1-\frac{P_i}{2}}$ Wert aus der Tabelle vergleichen (erwarteter Wert)}
+	\ccontent{ Der $\chi^2$-Anpassungstest überprüft ob eine unbekannte Wahrscheinlichkeitsverteilung einem bestimmten Verteilungsmodell folgt}
+	\ccontent{$ T = \frac{1}{n}(\sum \limits_{i=1}^r \frac{{N_i}^2}{p_i}) - n$}
+	\ccontent{ alternativ}
+	\ccontent{ $T = \sum \limits_{i=1}^r \frac{(N_i - np_i)^2}{n \cdot p_i}$}
+	\ccontent{ Das Ergebnis $T$ mit $\chi^2_{r-1;1-\alpha}$ Wert aus der Tabelle vergleichen}
+	\ccontent{$T < \chi^2 = $ Hypothese wird nicht verworfen}
 	
 	\heading{Allgemeine Matheregeln}
 	\subheading{Potenzen und Logarithmen}
@@ -531,6 +536,10 @@
 		$e^x$                   & $e^x + c$                               \\
 		\cline{1-2}
 	\end{tabularx}
+	
+	\subsubheading{Bestimmte Integrale}
+	\ccontent {$$\int_{a}^{b} f(x)dx = \left[ F(x) + C \right]_{a}^{b} = F(b) - F(a)$$}
+	
 
 \end{multicols*}
 \end{document}
