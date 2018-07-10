@@ -221,14 +221,18 @@
 	\subsubheading{Binomialverteilung approximieren}
 	\ccontent{ Die Binomialverteilung kann mit der Poisson Verteilung approximiert werden, dann gilt}
 	\ccontent{ $\lambda = n \cdot p$}
-	\ccontent{ Die Binomialverteilung kann auch mit der Normalverteilung approximiert werden, \textbf{bedingung ist}}
+	\ccontent{ Die Binomialverteilung kann auch mit der Normalverteilung approximiert werden, wobei gilt $n \cdot p = \mu$ und $n \cdot p \cdot (1-p) = \sigma^2$ \textbf{bedingung ist}}
 	\ccontent{ $X \sim B(n, p) \approx N(n \cdot p, n \cdot p \cdot (1-p))$}
 	\ccontent{ falls gilt}
 	\ccontent{ $n \cdot p \cdot (1-p) > 9$}
 	\ccontent{Bei der approximation mit der Normalverteilung kann man eine Stetigkeitskorrektur verwenden um ein besseres Ergebnis zu erhalten}
 	\ccontent{$P(X \leq k) \approx F_N(R + 0,5)$}
 	\ccontent{$P(X < k) \approx F_N(R - 0,5)$}
-	\ccontent{$P(a \leq X \leq b) \approx F_N(b + 0,5) - F_N(a-0,5$}
+	\ccontent{$P(a \leq X \leq b) \approx F_N(b + 0,5) - F_N(a-0,5)$}
+	\ccontent{\textbf{Zusammengefasst}}
+	\ccontent{Falls $np$ und $n(1-p)$ groß genug sind:}
+	\ccontent{$\mu = n\cdot p$ und $\sigma^2 = n\cdot p \cdot (1-p)$}
+	\ccontent{$F_B(x) \approx F_N(x+0.5) = \Phi(\frac{x+0.5-np}{\sqrt{np(1-p)}})$}
 
 	\subsubheading{Hypergeometrische Verteilung}
 	\ccontent{ Ohne zurücklegen, Wahrscheinlichkeit ändert sich nach jedem Ereignis}
@@ -248,6 +252,12 @@
 	\ccontent{ Schlüsselwörter sind \textbf{Ereignisse pro Zeiteinheit}, zum Beispiel Anrufe innerhalb bestimmter Zeitspanne}
 	\ccontent{ $X \sim Pois(\lambda)$}
 	\ccontent{ $P(X = k) = \pi_\lambda(k) = \frac{\lambda^k}{k!} \cdot e^{-\lambda}$}
+
+	\subsubheading{Nährung an Normalverteilung}
+	\ccontent{Wenn $\lambda$ groß genug ist kann die Verteilungsfunktion $F_P(x)$ der Poissonverteilung durch die Verteilungsfunktion der Normalverteilung $F_N(x)$ mit den Parametern}
+	\ccontent{$\mu = \lambda$ und $\sigma^2 = \lambda$}
+	\ccontent{genähert werden:}
+	\ccontent{$F_P(x) \approx F_N(x+0.5) = \Phi(\frac{x+0.5-\lambda}{sqrt{\lambda}})$}
 
 	\subsubheading{Geometrische Verteilung}
 	\ccontent{ $X \sim Geom(n, p)$}
@@ -287,6 +297,11 @@
 	\ccontent{ $X \sim N (\mu, \sigma^2)$}
 	\ccontent{ $P(X \leq k) = \Phi(\frac{k-\mu}{\sigma})$}
 	\ccontent{ $P(a \leq X \leq b) = \Phi(\frac{b-\mu}{\sigma}) - \Phi(\frac{a-\mu}{\sigma})$}
+
+	\subsubheading{Additionssatz der Normalverteilung}
+	\ccontent{Seien $X$ und $Y$ unabhängig und Normalverteilt, dann gilt: }
+	\ccontent{ $X + Y = N(\mu_X + \mu_Y; \sigma_X^2 + \sigma_Y^2) $ }
+	\ccontent{Ihre Summe ist ebenfalls Normalverteilt! }
 
 	\subsubheading{Quantile der Normalverteilung}
 	\ccontent{ Tabelliert ist das $\beta-$Quantil $z_\beta$ der Normalverteilung $N(0,1)$}
@@ -395,7 +410,9 @@
 	\ccontent{ $\sum X_i \sim N(n \cdot \mu, n \cdot \sigma^2)$}
 	\ccontent{ $\overline{X}_n = \frac{X_1+ ... + X_n}{n} = \bar{x} \sim N(\mu, \frac{\sigma^2}{n})$}
 	\ccontent{ Manche Verteilungen verhalten sich in der Summe anders, zum Beispiel die Rechteckverteilung ist nicht mehr R-Verteilt. Dann wird der Zentrale Grenzwertsatz verwendet}
-	
+	\subsubheading{ ZGS - Definition }
+	\ccontent{ Seien $X_1,...,X_n$ unabhängige und identisch verteilte Zufallsvariablen (nicht zwangsläufig Normalverteilt) mit Erwarungswert $\mu$ und Varianz $\sigma^2$. Ihre Summe sei $S = X_1 + ... + X_n$ mit Erwarungswert $n\mu$ und Varianz $n\sigma^2$. Es gilt für die zugehörige Zufallsvariable }
+	\ccontent{$Z = \frac{S-n\mu}{\sqrt{n}\sigma} = \frac{\overline{X}-\mu}{\frac{\sigma}{\sqrt{n}}}$ gilt $\lim\limits_{n \rightarrow \infty}{P(Z\leq z)} = \Phi(z)$} 
 	\heading{Induktive Statistik - Schätztheorie}
 	\subheading{Schätzfunktionen}
 	
