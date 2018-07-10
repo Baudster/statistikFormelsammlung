@@ -461,11 +461,17 @@
 	\subsubheading{$\chi^2$ - Anpassungstest}
 	\ccontent{ Der $\chi^2$-Anpassungstest überprüft ob eine unbekannte Wahrscheinlichkeitsverteilung einem bestimmten Verteilungsmodell folgt}
 	\ccontent{$ T = \frac{1}{n}(\sum \limits_{i=1}^r \frac{{N_i}^2}{p_i}) - n$}
-	\ccontent{ alternativ}
+	\ccontent{ wobei $N_i$ absolute Häufigkeit in Kategorie $r$, $n$ ist der Stichprobenumfang. Alternativ}
 	\ccontent{ $T = \sum \limits_{i=1}^r \frac{(N_i - np_i)^2}{n \cdot p_i}$}
 	\ccontent{ Das Ergebnis $T$ mit $\chi^2_{r-1;1-\alpha}$ Wert aus der Tabelle vergleichen}
 	\ccontent{$T < \chi^2 = $ Hypothese wird nicht verworfen}
-	
+	\textbf{Algorithmus} \\
+	1. Hypothese aufstellen \\
+	2. $n$ und $r$ festlegen ($n$ = Stichprobenumfang, $r$ = Anzahl der Klassen) \\
+	3. Verteilung auf welche getestet werden soll bestimmten \\
+	4. Alle $p_i$ berechenen (zu jeder Kategorie $r$ eines nach in 3. festgelegter Verteilung) \\
+	5. T berechnen. \\
+	6. $\chi^2$ und mit T vergleichen.
 	\subheading{Übersicht: Induktive Statistik}
 	
 	\ccontent{\textbf{GEGEBENENFALLS FOLGENDES NOCH ZU DEN EINZELNEN POSITIONEN VERSCHIEBEN}}
