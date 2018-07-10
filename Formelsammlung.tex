@@ -219,13 +219,13 @@
 	\ccontent{ $\binom{n}{k} \, \widehat{=} \, n \, \vert nCr \vert \, k$}
 	
 	\subsubheading{Binomialverteilung approximieren}
-	\ccontent{ Die Binomialverteilung kann mit der Poisson Verteilung approximiert werden, dann gilt}
+	\ccontent{ Die \textbf{Binomialverteilung} kann mit der \textbf{Poisson} Verteilung approximiert werden, dann gilt}
 	\ccontent{ $\lambda = n \cdot p$}
-	\ccontent{ Die Binomialverteilung kann auch mit der Normalverteilung approximiert werden, wobei gilt $n \cdot p = \mu$ und $n \cdot p \cdot (1-p) = \sigma^2$ \textbf{bedingung ist}}
+	\ccontent{ Die \textbf{Binomialverteilung} kann auch mit der \textbf{Normalverteilung} approximiert werden, wobei gilt $n \cdot p = \mu$ und $n \cdot p \cdot (1-p) = \sigma^2$, \textbf{bedingung ist}}
 	\ccontent{ $X \sim B(n, p) \approx N(n \cdot p, n \cdot p \cdot (1-p))$}
 	\ccontent{ falls gilt}
 	\ccontent{ $n \cdot p \cdot (1-p) > 9$}
-	\ccontent{Bei der approximation mit der Normalverteilung kann man eine Stetigkeitskorrektur verwenden um ein besseres Ergebnis zu erhalten}
+	\ccontent{Bei der approximation mit der Normalverteilung kann man eine \textbf{Stetigkeitskorrektur} verwenden um ein besseres Ergebnis zu erhalten}
 	\ccontent{$P(X \leq k) \approx F_N(R + 0,5)$}
 	\ccontent{$P(X < k) \approx F_N(R - 0,5)$}
 	\ccontent{$P(a \leq X \leq b) \approx F_N(b + 0,5) - F_N(a-0,5)$}
@@ -290,11 +290,13 @@
 	\ccontent{ Wenn $X \sim N(\mu, \sigma^2)$ verteilt ist}
 	\ccontent{ dann ist die standardisierte Zufallsvariable $Z = \frac{x-\mu}{\sigma} \sim N(0,1)$ standardnormalverteilt}
 	\ccontent{ Ist die Zufallsvariable standardverteilt kann die Wahrscheinlichkeit aus der Tabelle abgelesen werden}
+	\subsubheading{Regeln für den \textit{Phi}-Wert}
 	\ccontent{ $P(X \leq k) = \Phi(k)$}
-	\ccontent{ $P(X = k) = 0$ (``Integral ohne Breite!'')}
 	\ccontent{ $P(X \leq -k) = 1 - \Phi(+k)$}
-	\ccontent{ allgemein gilt}
+	\ccontent{ $P(X = k) = 0$ (``Integral ohne Breite!'')}
+	\ccontent{ allgemein folgt daraus, wenn}
 	\ccontent{ $X \sim N (\mu, \sigma^2)$}
+	\ccontent{dann gilt}
 	\ccontent{ $P(X \leq k) = \Phi(\frac{k-\mu}{\sigma})$}
 	\ccontent{ $P(a \leq X \leq b) = \Phi(\frac{b-\mu}{\sigma}) - \Phi(\frac{a-\mu}{\sigma})$}
 
@@ -387,18 +389,18 @@
 	\ccontent{$ Var(T_i) = \frac{(b-a)^2}{12}$}
 
 	\subsubheading{Allgemeine Regeln für Varianz}
+	\ccontent{ $Var(X+b) = Var(X)$}
 	\ccontent{ $Var(aX+b) = a^2 \cdot Var(X)$}
 	\ccontent{ $Var(X + Y) = Var(X) + Var(Y) + 2 \cdot cov(X,Y)$}
 	\ccontent{ wobei gilt: }
 	\ccontent{ $Cov(X,Y) = E((X-\mu_X)(Y-\mu_Y)) = E(X \cdot Y)-\mu_X\mu_Y$ }
-	\ccontent{ bei unabhängigen Zufallsvariablen $X$ und $Y$ gilt $Cov(X,Y) = 0$ siehe unten.}
+	\ccontent{ bei unabhängigen Zufallsvariablen $X$ und $Y$ ist $Cov(X,Y) = 0$ siehe unten.}
 	\subsubheading{\textbf{Unabhängige Zufallsvariablen}}
 
 	\subsubheading{Allgemeine Regeln}
 	\ccontent{ $Var(X + const) = Var(X)$}
-	\ccontent{ $E(X \cdot Y) = E(X) \cdot E(Y)$}
 	\ccontent{ $Var(X + Y) = Var(X) + Var(Y)$}
-	\ccontent{ $E(aX+b) = aE(X)+b$ }
+	\ccontent{ $E(X \cdot Y) = E(X) \cdot E(Y)$}
 	
 	\subheading{Wichtige Sätze der Stochastik}
 	\subsubheading{Zentraler Grenzwertsatz}
@@ -418,7 +420,7 @@
 	
 	\subsubheading{Maximum-Likelihood-Schätzer}
 	\ccontent{$L(x_1, \dots , x_n, \alpha) = \prod \limits_{i=1}^n f(x_i)$}
-	\ccontent{$f(x_i)$ muss eine Dichtefunktion sein}
+	\ccontent{$f(x_i)$ muss eine \textbf{Dichtefunktion} sein}
 	\ccontent{$ \frac{\partial \ln{L(x_1, \dots , x_n, \alpha)}}{\partial \alpha} = 0$}
 	\ccontent{Die Funktion nach dem Parameter $\alpha$ ableiten und Nullsetzen}
 	\ccontent{Das Ergebnis ist der Maximum-Likelihood-Schätzer}
@@ -445,7 +447,8 @@
 	\subheading{Tests für Lageparameter}
 	
 	\subsubheading{Gauß-Test}
-	\ccontent{noch zu füllen}
+	\ccontent{Ist ein Test für den Erwartungswert einer \textit{Normalverteilung} bei bekannter Standardabweichung $\sigma$}
+	\ccontent{NOCH ZU FÜLLEN}
 	
 	\subsubheading{t-Test}
 	\ccontent{noch zu füllen}
