@@ -82,12 +82,12 @@
 	\subheading{Lageparameter}
 
 	\subsubheading{Arithmetisches Mittel}
-	\ccontent{$\bar{x}=\frac{1}{n}\sum \limits_{i=1}^n x_i=\frac{1}{n}(x_1 + \dots + a_n)$}
-	\ccontent{Das Arithmetische Mittel $\bar{x}$ minimiert die Funktion}
+	\ccontent{$\overline{x}=\frac{1}{n}\sum \limits_{i=1}^n x_i=\frac{1}{n}(x_1 + \dots + a_n)$}
+	\ccontent{Das Arithmetische Mittel $\overline{x}$ minimiert die Funktion}
 	\ccontent{ $g(t) = \sum \limits_{i=1}^{n} (x_i - t)^2$}
 
 	\subsubheading{Geometrisches Mittel}
-	\ccontent{$\bar{x}_{geom} = \sqrt[n]{x_1 \cdot x_2 \cdot \dots \cdot x_n}$}
+	\ccontent{$\overline{x}_{geom} = \sqrt[n]{x_1 \cdot x_2 \cdot \dots \cdot x_n}$}
 
 	\subsubheading{Median}
 	\ccontent{$\tilde{x} = \begin{cases} x_\frac{n+1}{2} \\ \frac{1}{2} \cdot (x_\frac{n}{2} + x_{\frac{n}{2}+1}) \end{cases}$ $\begin{array}{l} , ungerade \\ , gerade \end{array}$}
@@ -96,9 +96,9 @@
 
 	\subheading{Streungsmaße}
 	\subsubheading{(empirische) Varianz}
-	\ccontent{$var = \sigma^2 = {s_n}^2 = \frac{1}{n-1} \sum \limits_{i=1}^n(x_i-\bar{x})^2$}
+	\ccontent{$var = \sigma^2 = {s_n}^2 = \frac{1}{n-1} \sum \limits_{i=1}^n(x_i-\overline{x})^2$}
 	\ccontent{alternativ}
-	\ccontent{$var = \sigma^2 = \frac{n}{n-1} \cdot (\overline{x^2} - \bar{x}^2)$}
+	\ccontent{$var = \sigma^2 = \frac{n}{n-1} \cdot (\overline{x^2} - \overline{x}^2)$}
 
 	\subsubheading{Standardabweichung}
 	\ccontent{$\sigma = s_n = \sqrt{\sigma^2}$}
@@ -106,13 +106,13 @@
 
 	\subsubheading{mittlere absolute Abweichung}
 	\ccontent{$\frac{1}{n} \sum \limits_{i=1}^n \vert x_i - \tilde{x} \vert$ für Median}
-	\ccontent{$\frac{1}{n} \sum \limits_{i=1}^n \vert x_i - \bar{x} \vert$ für arithmetisches Mittel}
+	\ccontent{$\frac{1}{n} \sum \limits_{i=1}^n \vert x_i - \overline{x} \vert$ für arithmetisches Mittel}
 
 	\subheading{Kovarianz und Korrelationskoeffizient}
 	\subsubheading{Kovarianz}
-	\ccontent{$cov(x,y) = S_{xy} = \frac{1}{n-1}\sum \limits_{i=1}^n(x_i-\bar{x})\cdot(y_i-\bar{y})$}
+	\ccontent{$cov(x,y) = S_{xy} = \frac{1}{n-1}\sum \limits_{i=1}^n(x_i-\overline{x})\cdot(y_i-\overline{y})$}
 	\ccontent{alternativ}
-	\ccontent{$cov(x,y) = S_{xy} = \frac{1}{n-1}\sum \limits_{i=1}^{n} (x_i \cdot y_i - n \cdot \bar{x} \cdot \bar{y})$}
+	\ccontent{$cov(x,y) = S_{xy} = \frac{1}{n-1}\sum \limits_{i=1}^{n} (x_i \cdot y_i - n \cdot \overline{x} \cdot \overline{y})$}
 
 	\subsubheading{Korrelationskoeffizent}
 	\ccontent{$r_{xy} = \frac{S_{xy}}{S_x \cdot S_y}$}
@@ -124,10 +124,10 @@
 	\subheading{Regressionsrechnung}
 	\subsubheading{Regressionsgerade}
 	\ccontent{ Variante 1}
-	\ccontent{$y = \bar{y} + \frac{S_{xy}}{{\sigma_x}^2} \cdot (x-\bar{x})$}
+	\ccontent{$y = \overline{y} + \frac{S_{xy}}{{\sigma_x}^2} \cdot (x-\overline{x})$}
 	\ccontent{ Variante 2}
 	\ccontent{$y = b + a \cdot x$}
-	\ccontent{$a = \frac{S_{xy}}{{\sigma_x}^2}$ und $b = \bar{y} - a \cdot \bar{x}$}
+	\ccontent{$a = \frac{S_{xy}}{{\sigma_x}^2}$ und $b = \overline{y} - a \cdot \overline{x}$}
 
 	\subsubheading{Kleinste quadratische Abweichung}
 	\ccontent{ Die Parameter $a, b, c, ...$ werden so gewählt, dass}
@@ -151,7 +151,7 @@
 	\ccontent{$\varnothing \, \subseteq \, \Omega \, \widehat{=}$ unmögliches Ereignis}
 	\ccontent{$\Omega \, \subseteq \, \Omega \, \widehat{=}$ sicheres Ereignis}
 	\ccontent{$A = \{1, 2, 3 \}$ Ereignis}
-	\ccontent{$\bar{A} = \{4, 5, 6 \}$ Gegenereignis}
+	\ccontent{$\overline{A} = \{4, 5, 6 \}$ Gegenereignis}
 
 	\subsubheading{Elementarereignis}
 	\ccontent{ einelementige Teilmenge von $\Omega$}
@@ -168,7 +168,7 @@
 	\subsubheading{Bedingte Wahrscheinlichkeit}
 	\ccontent{ Wahrscheinlichkeit für A unter der Bedingung B}
 	\ccontent{ $P(A \vert B) = \frac{P(A \cap B)}{P(B)}$}
-	\ccontent{ $P(\bar{A} \vert B) = 1 - P(A \vert B)$}
+	\ccontent{ $P(\overline{A} \vert B) = 1 - P(A \vert B)$}
 
 	\subsubheading{Formel von Bayes}
 	\ccontent{ $P(A \vert B) = \frac{P(B \vert A) \cdot P(A)}{P(B)}$}
@@ -179,22 +179,22 @@
 	\subsubheading{Viel Felder Tafel}
 	\def\arraystretch{1.5}% 
 	\begin{tabularx}{\columnwidth}{l|X|X|r}
-					&$A$					&$\bar{A}$					&$\sum$\\
+					&$A$					&$\overline{A}$					&$\sum$\\
 		\cline{1-4}
-		$B$			&$P(A \cap B)$			&$P(\bar{A} \cap B)$		&$P(B)$\\
+		$B$			&$P(A \cap B)$			&$P(\overline{A} \cap B)$		&$P(B)$\\
 		\cline{1-4}
-		$\bar{B}$	&$P(A \cap \bar{B})$	&$P(\bar{A} \cap \bar{B})$	&$P(\bar{B})$\\
+		$\overline{B}$	&$P(A \cap \overline{B})$	&$P(\overline{A} \cap \overline{B})$	&$P(\overline{B})$\\
 		\cline{1-4}
-		$\sum$		&$P(A)$					&$P(\bar{A})$				&$1$\\
+		$\sum$		&$P(A)$					&$P(\overline{A})$				&$1$\\
 	\end{tabularx}
 	\ccontent{ Die Ränder sind immer die Summen der zugehörigen Zeilen oder Spalten}
 
 	\subsubheading{Allgemeine Regeln}
 	\ccontent{ $P(A \cap B) = P(A \vert B) \cdot P(B) = P(B \vert A) \cdot P(A)$}
 	\ccontent{ $P(A \cup B) = P(A) + P(B) - P(A \cap B)$}
-	\ccontent{ $P(\bar{A}) = 1 - P(A)$}
-	\ccontent{ $P(\overline{A \cup B}) = P(\bar{A} \cap \bar{B})$}
-	\ccontent{ $P(\overline{A \cap B}) = P(\bar{A} \cup \bar{B})$}
+	\ccontent{ $P(\overline{A}) = 1 - P(A)$}
+	\ccontent{ $P(\overline{A \cup B}) = P(\overline{A} \cap \overline{B})$}
+	\ccontent{ $P(\overline{A \cap B}) = P(\overline{A} \cup \overline{B})$}
 	\ccontent{ Wenn A und B unabhängig, dann gilt}
 	\ccontent{ $P(A \cap B) = P(A) \cdot P(B)$}
 	\ccontent{ $P(A \vert B) = P(A)$}
@@ -413,7 +413,7 @@
 	\ccontent{ $E(X_i) = \mu$}
 	\ccontent{ $Var(X_i) = \sigma^2$}
 	\ccontent{ $\sum X_i \sim N(n \cdot \mu, n \cdot \sigma^2)$}
-	\ccontent{ $\overline{X}_n = \frac{X_1+ ... + X_n}{n} = \bar{x} \sim N(\mu, \frac{\sigma^2}{n})$}
+	\ccontent{ $\overline{X}_n = \frac{X_1+ ... + X_n}{n} = \overline{x} \sim N(\mu, \frac{\sigma^2}{n})$}
 	\ccontent{ Manche Verteilungen verhalten sich in der Summe anders, zum Beispiel die Rechteckverteilung ist nicht mehr R-Verteilt. Dann wird der Zentrale Grenzwertsatz verwendet}
 	\subsubheading{ ZGS - Definition }
 	\ccontent{ Seien $X_1,...,X_n$ unabhängige und identisch verteilte Zufallsvariablen (nicht zwangsläufig Normalverteilt) mit Erwarungswert $\mu$ und Varianz $\sigma^2$. Ihre Summe sei $S = X_1 + ... + X_n$ mit Erwarungswert $n\mu$ und Varianz $n\sigma^2$. Es gilt für die zugehörige Zufallsvariable }
@@ -431,20 +431,20 @@
 	\subheading{Konfidenzintervalle}
 	\subsubheading{Intervall für $E(X)$ einer Normalverteilung}
 	\ccontent{Ist $X \sim N(\mu, \sigma^2)$ verteilt, dann ist}
-	\ccontent{$Z = \frac{\bar{X} - \mu}{\sigma / \sqrt{n}} \sim N(0,1)$}
+	\ccontent{$Z = \frac{\overline{X} - \mu}{\sigma / \sqrt{n}} \sim N(0,1)$}
 	\subsubheading{Bei \textbf{bekannter} Standardabweicheung $\sigma$}
-	\ccontent{$\left[\bar{x} - z_{1-(\alpha / 2)} \cdot \frac{\sigma}{\sqrt{n}}, \bar{x} + z_{1-(\alpha / 2)} \cdot \frac{\sigma}{\sqrt{n}}\right]$}
-	\ccontent{$\bar{X} = $ arithmetisches Mittel, bzw erwartungsstreuer Schätzer bei $n$ unabhängigen Stichproben}
+	\ccontent{$\left[\overline{x} - z_{1-(\alpha / 2)} \cdot \frac{\sigma}{\sqrt{n}}, \overline{x} + z_{1-(\alpha / 2)} \cdot \frac{\sigma}{\sqrt{n}}\right]$}
+	\ccontent{$\overline{X} = $ arithmetisches Mittel, bzw erwartungsstreuer Schätzer bei $n$ unabhängigen Stichproben}
 	\ccontent{$\alpha = $ Signifikanzwahrscheinlichkeit (Irrtumswahrscheinlichkeit)}
 	\ccontent{$1-\alpha = $ Vertrauensniveau}
 	\ccontent{Ist $\alpha$ gegegeben, berechne das Quantil $z_{1-(\alpha / 2)}$}
 	
 	\subsubheading{Bei \textbf{unbekannter} Standardabweicheung $\sigma$}
-	\ccontent{$\left[\bar{x} - t_{1-(\alpha / 2)} \cdot \frac{s}{\sqrt{n}}, \bar{x} + t_{1-(\alpha / 2)} \cdot \frac{s}{\sqrt{n}}\right]$}
+	\ccontent{$\left[\overline{x} - t_{1-(\alpha / 2)} \cdot \frac{s}{\sqrt{n}}, \overline{x} + t_{1-(\alpha / 2)} \cdot \frac{s}{\sqrt{n}}\right]$}
 	\ccontent{Anstatt $\sigma^2$ wird der erwartungstreue Schätzer $s$ verwendet}
-	\ccontent{ $s^2 = \frac{1}{n-1} \sum \limits_{i=1}^n(X_i - \bar{X})^2$}
+	\ccontent{ $s^2 = \frac{1}{n-1} \sum \limits_{i=1}^n(X_i - \overline{X})^2$}
 	\ccontent{ beziehungsweise }
-	\ccontent{ $s = \sqrt{\frac{1}{n-1} \sum \limits_{i=1}^n(X_i - \bar{X})^2}$}
+	\ccontent{ $s = \sqrt{\frac{1}{n-1} \sum \limits_{i=1}^n(X_i - \overline{X})^2}$}
 
 	\heading{Induktive Statistik - Hypothesentest}
 	\subheading{Tests für Lageparameter}
@@ -503,14 +503,14 @@
 	\subsubheading{Varianz $\sigma^2$ \textbf{bekannt}}
 	\subsubheading{Zweiseitige Konfidenzintervalle}
 	\ccontent{Wegen}
-	\ccontent{$Z=\frac{\bar{X} - \mu}{\sigma / \sqrt{n}} = \frac{\bar{X} - \mu}{\sigma} \cdot \sqrt{n} \sim N(0,1)$}
+	\ccontent{$Z=\frac{\overline{X} - \mu}{\sigma / \sqrt{n}} = \frac{\overline{X} - \mu}{\sigma} \cdot \sqrt{n} \sim N(0,1)$}
 	\ccontent{ist zu  gegebenen Konfidenzniveau $1 - \alpha$ das Konfidenzintervall gleich}
-	\ccontent{$\left[ \bar{x} - z_{1 - \frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}, \bar{x} + z_{1 - \frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}\right]$}
+	\ccontent{$\left[ \overline{x} - z_{1 - \frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}, \overline{x} + z_{1 - \frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}\right]$}
 	\subsubheading{Einseitige Konfidenzintervalle}
-	\ccontent{$\left] - \infty, \bar{x} + z_{1 - \alpha} \cdot \frac{\sigma}{\sqrt{n}} \right]$ bzw. $\left[ - \infty, \bar{x} - z_{1 - \alpha} \cdot \frac{\sigma}{\sqrt{n}} \right[$}
+	\ccontent{$\left] - \infty, \overline{x} + z_{1 - \alpha} \cdot \frac{\sigma}{\sqrt{n}} \right]$ bzw. $\left[ - \infty, \overline{x} - z_{1 - \alpha} \cdot \frac{\sigma}{\sqrt{n}} \right[$}
 	\subsubheading{Zweiseitige Tests}
 	\ccontent{Für $\mu_0$ sei}
-	\ccontent{$Z = \frac{\bar{X} - \mu_0}{\sigma / \sqrt{n}}$}
+	\ccontent{$Z = \frac{\overline{X} - \mu_0}{\sigma / \sqrt{n}}$}
 	\ccontent{$H_0 : \mu = \mu_0$ Bereich: $- z_{1 - \frac{\alpha}{2}} \leq Z \leq z_{1 - \frac{\alpha}{2}}$}
 	\subsubheading{Einseitige Tests}
 	\ccontent{$H_0 : \mu \leq \mu_0$ Bereich: $Z \leq z_{1 - \alpha}$}
