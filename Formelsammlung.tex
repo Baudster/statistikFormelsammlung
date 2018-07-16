@@ -420,13 +420,16 @@
 	\ccontent{$Z = \frac{S-n\mu}{\sqrt{n}\sigma} = \frac{\overline{X}-\mu}{\frac{\sigma}{\sqrt{n}}}$ gilt $\lim\limits_{n \rightarrow \infty}{P(Z\leq z)} = \Phi(z)$} 
 	\heading{Induktive Statistik - Schätztheorie}
 	\subheading{Schätzfunktionen}
-	
+	\begin{minipage}{\columnwidth}
 	\subsubheading{Maximum-Likelihood-Schätzer}
-	\ccontent{$L(x_1, \dots , x_n, \alpha) = \prod \limits_{i=1}^n f(x_i)$}
-	\ccontent{$f(x_i)$ muss eine \textbf{Dichtefunktion} sein}
-	\ccontent{$ \frac{\partial \ln{L(x_1, \dots , x_n, \alpha)}}{\partial \alpha} = 0$}
-	\ccontent{Die Funktion nach dem Parameter $\alpha$ ableiten und Nullsetzen}
-	\ccontent{Das Ergebnis ist der Maximum-Likelihood-Schätzer}
+	\ccontent{Vorbereitung: Falls $F(x)$ gegen leite ab um $f(x)$ zu erhalten ($f(x_i)$ muss eine \textbf{Dichtefunktion} sein)}
+	\ccontent{1. Stelle auf: $L(x_1, \dots , x_n, \alpha) = \prod \limits_{i=1}^n f(x_i)$ \\
+	\textit{Tipp}: Wenn möglich alles was nicht von $x_i$ abhängt aus der Summenfunktion ziehen. \\
+	2. Wende an: ln($L(x_1, \dots , x_n, \alpha)$)\\
+	3. Die Funktion nach dem Parameter $\alpha$ ableiten und Nullsetzen: $ \frac{\partial \ln{L(x_1, \dots , x_n, \alpha)}}{\partial \alpha} = 0$ \\
+	4. Nach $\alpha$ auflösen, Das Ergebnis ist der Maximum-Likelihood-Schätzer
+	}
+	\end{minipage}
 	
 	\subheading{Konfidenzintervalle}
 	\subsubheading{Intervall für $E(X)$ einer Normalverteilung}
@@ -451,6 +454,7 @@
 	\ccontent{Wähle Fall a) wenn Verteilung statt absoluter Wert gegeben (z.b. "jeder n-te...") und verfolge Stragie (3).}
 	\ccontent{Wähle Fall b) wenn $\overline{X} \leq \mu_0$}
 	\ccontent{Wähle Fall c) wenn $\overline{X} \geq \mu_0$}
+
 	\subsubheading{\textbf{(1)}Gauß-Test (Wählen wenn $\sigma^2$ bekannt)}
 	\ccontent{Ist ein Test für den Erwartungswert einer \textit{Normalverteilung} bei bekannter Standardabweichung $\sigma$}
 	\ccontent{Wähle eine mögliche Hypothesenkombination:}
@@ -466,6 +470,8 @@
 	\ccontent{a) $|z| > z_{1-\frac{\alpha}{2}}$}
 	\ccontent{b) $z < -z_{1-\alpha}$}
 	\ccontent{c) $z > z_{1-\alpha}$}
+
+
 	
 	\subsubheading{\textbf{(2)}$t$-Test (Wählen wenn $\sigma^2$ \textbf{nicht} bekannt)}
 	\ccontent{Wähle eine mögliche Hypothesenkombination:}
@@ -630,6 +636,23 @@
 	\ccontent {$$\int_{a}^{b} f(x)dx = \left[ F(x) + C \right]_{a}^{b} = F(b) - F(a)$$}
 	\ccontent {$\int_{a}^{b} a \cdot f(x)dx = a \cdot \int_{a}^{b} f(x)dx$}
 	
+	\subsubheading{Summen und Produkte}
+	\def\arraystretch{0}%
+	\begin{tabularx}{\columnwidth}{|X|}
+	\cline{1-1}
+	\begin{center}$\prod\limits_{i=1}^n a \cdot x_i = a^n \prod\limits_{i=1}^n x_i$\end{center}	\\
+	\cline{1-1}
+	\begin{center}$\sum \limits_{i=1}^n a \cdot x_i = a \cdot \sum \limits_{i=1}^n x_i$\end{center} \\
+	\cline{1-1}	
+	\end{tabularx}
+
+	\subsubheading{Sonstiges}
+	\def\arraystretch{0}%
+	\begin{tabularx}{\columnwidth}{|X|}
+	\cline{1-1}
+	\begin{center}$\frac{b}{\alpha} = c \Leftrightarrow \alpha = \frac{b}{c}$\end{center}	\\
+	\cline{1-1}
+	\end{tabularx}
 
 \end{multicols*}
 \end{document}
