@@ -471,9 +471,18 @@
 	\ccontent{a) $|z| > z_{1-\frac{\alpha}{2}}$}
 	\ccontent{b) $z < -z_{1-\alpha}$}
 	\ccontent{c) $z > z_{1-\alpha}$}
-	% tabelle 1 %
+	\subsubheading{Gauß-Test Tabellenform}
+	\def\arraystretch{1.5}% 
+	\begin{tabularx}{\columnwidth}{l|c|c}
+		 & $H_0$ & Ablehnungsbereich \\
+		 \cline{1-3}
+		 & $ \mu = \mu_0$ & $\vert T \vert > Z_{1-\frac{\alpha}{2}}$ \\
+		 \cline{1-3}
+		 $\overline{X} \leq \mu_0$ & $\mu \leq \mu_0$ & $T > Z_{1-\alpha}$ \\
+		 \cline{1-3}
+		 $\overline{X} \geq \mu_0$ & $\mu \geq \mu_0$ & $T < -Z_{1-\alpha}$ \\
+	\end{tabularx}
 
-	
 	\subsubheading{\textbf{(2)}$t$-Test (Wählen wenn $\sigma^2$ \textbf{nicht} bekannt)}
 	\ccontent{Wähle eine mögliche Hypothesenkombination:}
 	\ccontent{a) $H_0:\mu = \mu_0$}
@@ -482,13 +491,23 @@
 	\ccontent{Wähle ein Signifikanzniveau $\alpha$ (z.B.: 0.05)}
 	\ccontent{Ziehe eine Stichprobe vom Umfang $n$, berechne daraus $\overline{x}$ und $s$ sowie den zugehörigen Prüfwert:}
 	\ccontent{$t=\sqrt{n}\cdot\frac{\overline{x}-\mu_0}{s}$}
-	\ccontent{Bestimme das entsprechende Quantil der $t$-Verteilung:}
+	\ccontent{Bestimme das entsprechende Quantil der $t$-Verteilung, wobei der $n$-Wert der Tabelle $=(n-1)$ ist, also die Stückzahl $-1$ ist:}
 	\ccontent{a) $t_{n-1;1-\frac{\alpha}{2}}$ bzw. b) $-t_{n-1;1-\alpha}$ c) $t_{n-1;1-\alpha}$}
 	\ccontent{$H_0$ ist zu verwerfen, falls}
 	\ccontent{a) $|t| > t_{n-1;1-\frac{\alpha}{2}}$}
 	\ccontent{b) $t < -t_{n-1;1-\alpha}$}
 	\ccontent{c) $t > t_{n-1;1-\alpha}$}
-	% tabelle 2 %
+	\subsubheading{$t$-Test Tabellenform}
+	\begin{tabularx}{\columnwidth}{l|c|c|c}
+		& $H_0$ & \multicolumn{2}{c}{Ablehnungsbereich} \\
+		\cline{1-4}
+		& $ \mu = \mu_0$ & $\vert T \vert > t_{1-\frac{\alpha}{2}}$ &$(n-1)$\\
+		\cline{1-4}
+		$\overline{X} \leq \mu_0$ & $\mu \leq \mu_0$ & $T > t_{1-\alpha}$ &$(n-1)$\\
+		\cline{1-4}
+		$\overline{X} \geq \mu_0$ & $\mu \geq \mu_0$ & $T < -t_{1-\alpha}$ &$(n-1)$\\
+	\end{tabularx}
+
 	\subsubheading{\textbf{(3)}Wahrscheinlichkeit gegeben}
 	\ccontent{
 		\begin{equation}
