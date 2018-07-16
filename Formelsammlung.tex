@@ -390,7 +390,7 @@
 	
 	\subsubheading{Für Gleichverteilung(Rechteckverteilung)}
 	\ccontent{$ Var(T_i) = \frac{(b-a)^2}{12}$}
-
+	\begin{minipage}[b]{\linewidth}
 	\subsubheading{Allgemeine Regeln für Varianz}
 	\ccontent{ $Var(X+b) = Var(X)$}
 	\ccontent{ $Var(aX+b) = a^2 \cdot Var(X)$}
@@ -398,8 +398,9 @@
 	\ccontent{ wobei gilt: }
 	\ccontent{ $Cov(X,Y) = E((X-\mu_X)(Y-\mu_Y)) = E(X \cdot Y)-\mu_X\mu_Y$ }
 	\ccontent{ bei unabhängigen Zufallsvariablen $X$ und $Y$ ist $Cov(X,Y) = 0$ siehe unten.}
-	\subsubheading{\textbf{Unabhängige Zufallsvariablen}}
+	\end{minipage}
 
+	\subsubheading{\textbf{Unabhängige Zufallsvariablen}}
 	\subsubheading{Allgemeine Regeln}
 	\ccontent{ $Var(X + const) = Var(X)$}
 	\ccontent{ $Var(X + Y) = Var(X) + Var(Y)$}
@@ -470,7 +471,7 @@
 	\ccontent{a) $|z| > z_{1-\frac{\alpha}{2}}$}
 	\ccontent{b) $z < -z_{1-\alpha}$}
 	\ccontent{c) $z > z_{1-\alpha}$}
-
+	% tabelle 1 %
 
 	
 	\subsubheading{\textbf{(2)}$t$-Test (Wählen wenn $\sigma^2$ \textbf{nicht} bekannt)}
@@ -487,6 +488,7 @@
 	\ccontent{a) $|t| > t_{n-1;1-\frac{\alpha}{2}}$}
 	\ccontent{b) $t < -t_{n-1;1-\alpha}$}
 	\ccontent{c) $t > t_{n-1;1-\alpha}$}
+	% tabelle 2 %
 	\subsubheading{\textbf{(3)}Wahrscheinlichkeit gegeben}
 	\ccontent{
 		\begin{equation}
@@ -501,7 +503,7 @@
 	\ccontent{$\Rightarrow$ ZGS $\Rightarrow \sum X_i \stackrel{a}{\sim} N(np_0|np_0(1-p_0)$}
 	\ccontent{$T=\frac{X-np_0}{\sqrt{np_0(1-p_0)}}$}
 	\ccontent{Verwerfe oder nicht nach Regeln in Variante (1)}
-
+	
 	\subheading{Tests für Streuungsmaße}
 	
 	\subsubheading{$\chi^2$ - Anpassungstest}
@@ -518,7 +520,6 @@
 	4. Alle $p_i$ berechenen (zu jeder Kategorie $r$ eines nach in 3. festgelegter Verteilung) \\
 	5. T berechnen. \\
 	6. $\chi^2$ mit T vergleichen.
-
 	\heading{Allgemeine Matheregeln}
 	\subheading{Potenzen und Logarithmen}
 	
@@ -653,6 +654,5 @@
 	\begin{center}$\frac{b}{\alpha} = c \Leftrightarrow \alpha = \frac{b}{c}$\end{center}	\\
 	\cline{1-1}
 	\end{tabularx}
-
 \end{multicols*}
 \end{document}
