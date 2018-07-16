@@ -525,9 +525,8 @@
 	\ccontent{$\Rightarrow$ ZGS $\Rightarrow \sum X_i \stackrel{a}{\sim} N(np_0|np_0(1-p_0)$}
 	\ccontent{$T=\frac{X-np_0}{\sqrt{np_0(1-p_0)}}$}
 	\ccontent{Verwerfe oder nicht nach Regeln in Variante (1)}
-	
+	\begin{minipage}[b]{\linewidth}
 	\subheading{Tests für Streuungsmaße}
-	
 	\subsubheading{$\chi^2$ - Anpassungstest}
 	\ccontent{ Der $\chi^2$-Anpassungstest überprüft ob eine unbekannte Wahrscheinlichkeitsverteilung einem bestimmten Verteilungsmodell folgt}
 	\ccontent{$ T = \frac{1}{n}(\sum \limits_{i=1}^r \frac{{N_i}^2}{p_i}) - n$}
@@ -542,9 +541,10 @@
 	4. Alle $p_i$ berechenen (zu jeder Kategorie $r$ eines nach in 3. festgelegter Verteilung) \\
 	5. T berechnen. \\
 	6. $\chi^2$ mit T vergleichen.
+	\end{minipage}
+	\begin{minipage}[b]{\linewidth}
 	\heading{Allgemeine Matheregeln}
 	\subheading{Potenzen und Logarithmen}
-	
 	\subsubheading{Potenzgesetze}
 	\def\arraystretch{0}%
 	\begin{tabularx}{\columnwidth}{|X|}
@@ -566,30 +566,32 @@
 		\begin{center}$\sqrt[n]{k} = k^{\frac{1}{n}}$\end{center}	\\
 		\cline{1-1}	
 	\end{tabularx}
-	
+\end{minipage}
+\begin{minipage}[b]{\linewidth}
 	\subsubheading{Logarithmusregeln}
 	\def\arraystretch{0}%
 	\begin{tabularx}{\columnwidth}{|X|}
-		\cline{1-1}
-		\begin{center}$x = \log_{a}{y} \Leftrightarrow y = a^x$\end{center}	\\
-		\cline{1-1}
-		\begin{center}$\log{1} = 0$\end{center}								\\
-		\cline{1-1}
-		\begin{center}$\log{x \cdot y} = \log{x} + \log{y}$\end{center}		\\
-		\cline{1-1}
-		\begin{center}$- \log{x} = \log{\frac{1}{x}}$\end{center}			\\
-		\cline{1-1}
-		\begin{center}$\log{\frac{x}{y}} = \log{x} - \log{y}$\end{center}	\\
-		\cline{1-1}
-		\begin{center}$\log{x^n} = n \cdot \log{x}$\end{center}				\\
-		\cline{1-1}
-		\begin{center}$\log_{a}{x} = \frac{\log{x}} {\log{a}}$\end{center}	\\
-		\cline{1-1}
-		\begin{center}$\log{(\prod \limits_{i=1}^n x_i)} = \sum \limits_{i=1}^n \log{x_i}$\end{center} \\
-		\cline{1-1}
-		\begin{center}$ln(e^x) = x$\end{center} \\
-		\cline{1-1}
+	\cline{1-1}
+	\begin{center}$x = \log_{a}{y} \Leftrightarrow y = a^x$\end{center}	\\
+	\cline{1-1}
+	\begin{center}$\log{1} = 0$\end{center}								\\
+	\cline{1-1}
+	\begin{center}$\log{x \cdot y} = \log{x} + \log{y}$\end{center}		\\
+	\cline{1-1}
+	\begin{center}$- \log{x} = \log{\frac{1}{x}}$\end{center}			\\
+	\cline{1-1}
+	\begin{center}$\log{\frac{x}{y}} = \log{x} - \log{y}$\end{center}	\\
+	\cline{1-1}
+	\begin{center}$\log{x^n} = n \cdot \log{x}$\end{center}				\\
+	\cline{1-1}
+	\begin{center}$\log_{a}{x} = \frac{\log{x}} {\log{a}}$\end{center}	\\
+	\cline{1-1}
+	\begin{center}$\log{(\prod \limits_{i=1}^n x_i)} = \sum \limits_{i=1}^n \log{x_i}$\end{center} \\
+	\cline{1-1}
+	\begin{center}$ln(e^x) = x$\end{center} \\
+	\cline{1-1}
 	\end{tabularx}
+	\end{minipage}
 	
 	\subheading{Ableitungen und Integrale}
 
@@ -624,7 +626,7 @@
 		$x \pm c$   & $1$     					 \\
 		\cline{1-2}
 	\end{tabularx}
-
+	\begin{minipage}[b]{\linewidth}
 	\subsubheading{Verknüpfte Ableitungsregeln}
 	\def\arraystretch{1.5}% 
 	\begin{tabularx}{\columnwidth}{|l|X|}
@@ -640,6 +642,7 @@
 		$f(g(x))$          & $f'(g(x)) \cdot g'(x)$                                    \\
 		\cline{1-2}
 	\end{tabularx}
+	\end{minipage}
 
 	\subsubheading{wichtige Stammfunktionen}
 	\def\arraystretch{1.5}% 
