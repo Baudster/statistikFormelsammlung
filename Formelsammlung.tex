@@ -433,6 +433,7 @@
 	\end{minipage}
 	
 	\subheading{Konfidenzintervalle}
+	Achtung die Standartabweichung $\sigma$ bezieht sich im Folgenden auf die Grundgesammtheit! Es kann also vorkommen, das eine Standartabweichung gegeben ist, dann ist allerdings noch zu Prüfen ob es sich um die der Stichprobe oder der Grundgesammtheit handelt.
 	\subsubheading{Intervall für $E(X)$ einer Normalverteilung}
 	\ccontent{Ist $X \sim N(\mu, \sigma^2)$ verteilt, dann ist}
 	\ccontent{$Z = \frac{\overline{X} - \mu}{\sigma / \sqrt{n}} \sim N(0,1)$}
@@ -451,6 +452,7 @@
 	\ccontent{ $s = \sqrt{\frac{1}{n-1} \sum \limits_{i=1}^n(X_i - \overline{X})^2}$}
 
 	\heading{Induktive Statistik - Hypothesentest}
+	Achtung die Standartabweichung $\sigma$ bezieht sich im Folgenden auf die Grundgesammtheit! Es kann also vorkommen, das eine Standartabweichung gegeben ist, dann ist allerdings noch zu Prüfen ob es sich um die der Stichprobe oder der Grundgesammtheit handelt.
 	\subheading{Tests für Lageparameter}
 	\ccontent{Wähle Fall a) wenn Verteilung statt absoluter Wert gegeben (z.b. "jeder n-te...") und verfolge Stragie (3).}
 	\ccontent{Wähle Fall b) wenn $\overline{X} \leq \mu_0$}
@@ -619,6 +621,8 @@
 		\cline{1-2}
 		$\cot{x}$   & $\frac{1}{\sin^2{x}}$      \\
 		\cline{1-2}
+		$x \pm c$   & $1$     					 \\
+		\cline{1-2}
 	\end{tabularx}
 
 	\subsubheading{Verknüpfte Ableitungsregeln}
@@ -675,6 +679,12 @@
 	\cline{1-1}
 	\begin{center}$\frac{b}{\alpha} = c \Leftrightarrow \alpha = \frac{b}{c}$\end{center}	\\
 	\cline{1-1}
+	\begin{center}$\sum \limits_{i=1}^n -x_i =  -\sum \limits_{i=1}^n x_i$\end{center} \\
+	\cline{1-1}	
+	\begin{center}$ln(a \cdot \prod \limits_{i=1}^n x_i ) = ln(a)+ \sum \limits_{i=1}^n x_i$\end{center} \\
+	\cline{1-1}	
+	\begin{center}$\frac{a}{b}/c = \frac{a}{b} \cdot \frac{1}{c}$\end{center} \\
+	\cline{1-1}	
 	\end{tabularx}
 \end{multicols*}
 \end{document}
