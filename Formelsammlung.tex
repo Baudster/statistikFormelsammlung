@@ -252,9 +252,11 @@
 	\ccontent{ $\frac{n}{N} < 0,05$}
 
 	\subsubheading{Poisson Verteilung}
-	\ccontent{ Schlüsselwörter sind \textbf{Ereignisse pro Zeiteinheit}, zum Beispiel Anrufe innerhalb bestimmter Zeitspanne}
+	\ccontent{ Schlüsselwörter sind \textbf{Ereignisse pro Zeiteinheit}, zum Beispiel Anrufe innerhalb bestimmter Zeitspanne oder Durchschnitt Ereignisse x pro y (z.B.: Staubkörner pro cm$^2$)}
 	\ccontent{ $X \sim Pois(\lambda)$}
 	\ccontent{ $P(X = k) = \pi_\lambda(k) = \frac{\lambda^k}{k!} \cdot e^{-\lambda}$}
+	\ccontent{ $P(X \leq k) = \sum \limits_{i=1}^k \frac{\lambda^i}{i!} \cdot e^{-\lambda}$ }
+	\ccontent{ $P(X \geq k) = 1 - P(X<k)$ }
 	\ccontent{ Eingabe Taschenrechner }
 	\ccontent{ $Mode \rightarrow 4 \rightarrow \downarrow \rightarrow 3 \rightarrow 2 \rightarrow k \rightarrow \lambda$ }
 	\subsubheading{Nährung an Normalverteilung}
@@ -281,6 +283,7 @@
 	\subsubheading{Verteilungsfunktion}
 	\ccontent{Eine Verteilungsfunktion ist eine Funktion $F$, die jedem $x$ einer Zufallsvariable $X$ genau eine Wahrscheinlichkeit $P(X \leq x)$ zuordnet}
 	\ccontent{ $F(x) \to P(X \leq x)$}
+	\ccontent{ $P(a \leq X \leq b) = F(b) - F(a)$ }
 	\ccontent{Bedingungen der Verteilungsfunktion}
 	\ccontent{Die Verteilungsfunktion \textbf{muss} stetig sein}
 	\ccontent{Die Verteilungsfunktion \textbf{muss} monoton steigend sein}
@@ -317,6 +320,7 @@
 	\ccontent{ $\beta = 0.9 => z_\beta = 1.28155$}
 	
 	\subsubheading{Exponentialverteilung}
+	\ccontent{ $X \sim Exp(\lambda)$ }
 	\ccontent{ Eine exponentialverteilte Zufallsvariable T hat die Dichte}
 	\ccontent{ $f(t) = \begin{cases} \lambda \cdot e^{- \lambda \cdot t} \\ 0 \end{cases}$ $\begin{array}{l} , t \geq 0 \\ , t < 0 \end{array}$}
 	\ccontent{ und daraus eribt sich die Verteilungsfunktion}
@@ -396,6 +400,7 @@
 	\subsubheading{Allgemeine Regeln für Varianz}
 	\ccontent{ $Var(X+b) = Var(X)$}
 	\ccontent{ $Var(aX+b) = a^2 \cdot Var(X)$}
+	\ccontent{ $Var(X) \geq 0$ }
 	\ccontent{ $Var(X + Y) = Var(X) + Var(Y) + 2 \cdot cov(X,Y)$}
 	\ccontent{ wobei gilt: }
 	\ccontent{ $Cov(X,Y) = E((X-\mu_X)(Y-\mu_Y)) = E(X \cdot Y)-\mu_X\mu_Y$ }
@@ -415,9 +420,28 @@
 	\ccontent{ $\widehat{=}$ haben die gleiche Verteilung}
 	\ccontent{ $E(X_i) = \mu$}
 	\ccontent{ $Var(X_i) = \sigma^2$}
-	\ccontent{ $\sum X_i \sim N(n \cdot \mu, n \cdot \sigma^2)$}
-	\ccontent{ $\overline{X}_n = \frac{X_1+ ... + X_n}{n} = \overline{x} \sim N(\mu, \frac{\sigma^2}{n})$}
+	\ccontent{ Fall a) bei Summierten Ereignisse, Fall b) für Durchschnitt}
+	\ccontent{ a) $\sum X_i \sim N(n \cdot \mu, n \cdot \sigma^2)$}
+	\ccontent{ b) $\overline{X}_n = \frac{X_1+ ... + X_n}{n} = \overline{x} \sim N(\mu, \frac{\sigma^2}{n})$}
 	\ccontent{ Manche Verteilungen verhalten sich in der Summe anders, zum Beispiel die Rechteckverteilung ist nicht mehr R-Verteilt. Dann wird der Zentrale Grenzwertsatz verwendet}
+	\subsubheading{ ZGS Algorithmus }
+	\ccontent{ 
+		$n$ : Anzahl der Zufallsvariablen (Stichproben) bestimmen, \\
+		$\sigma^2$: Varianz bestimmen,\\
+		$\mu$: Erwartungswert (Mittelwert) bestimmen \\
+		Wonach wird gesucht? Summe oder Durchschnitt
+	\begin{enumerate}
+		\item \textbf{Summe}: \\
+		Erwartungswert der Summe bestimmen mit $E(S) = n \cdot \mu$ alternativ und gleichwertig ist: $E(S) = \sum \limits_{i=1}^n E(X_i)$ \\
+		Falls notwendig Varianz aus Erwartungswert berechnen: $Var(X) = E(X^2)-E(X)^2$ \\
+		Wahrscheinlichkeit normalverteilt berechnen mit $ N(n \cdot \mu, n \cdot \sigma^2)$
+		\item \textbf{Durchschnitt}: \\
+		Durchschnittserwartungswert bestimmen entwder gegeben oder $\frac{1}{n} \cdot \sum \limits_{i=1}^n E(X_i)$\\
+		Falls notwendig (nicht gegeben) Varianz berechnen. \\
+		Wahrscheinlichkeit normalverteilt berechnen mit $N(\mu, \frac{\sigma^2}{n})$
+	\end{enumerate}
+	}
+	\ccontent{\textbf{Hinweis} Normalverteilung berechnen: $P(X \leq k) = \Phi(\frac{k-\mu}{\sigma})$}
 	\subsubheading{ ZGS - Definition }
 	\ccontent{ Seien $X_1,...,X_n$ unabhängige und identisch verteilte Zufallsvariablen (nicht zwangsläufig Normalverteilt) mit Erwarungswert $\mu$ und Varianz $\sigma^2$. Ihre Summe sei $S = X_1 + ... + X_n$ mit Erwarungswert $n\mu$ und Varianz $n\sigma^2$. Es gilt für die zugehörige Zufallsvariable }
 	\ccontent{$Z = \frac{S-n\mu}{\sqrt{n}\sigma} = \frac{\overline{X}-\mu}{\frac{\sigma}{\sqrt{n}}}$ gilt $\lim\limits_{n \rightarrow \infty}{P(Z\leq z)} = \Phi(z)$} 
@@ -435,16 +459,18 @@
 	\end{minipage}
 	
 	\subheading{Konfidenzintervalle}
-	Achtung die Standartabweichung $\sigma$ bezieht sich im Folgenden auf die Grundgesammtheit! Es kann also vorkommen, das eine Standartabweichung gegeben ist, dann ist allerdings noch zu Prüfen ob es sich um die der Stichprobe oder der Grundgesammtheit handelt.
-	\subsubheading{Intervall für $E(X)$ einer Normalverteilung}
+	Achtung die Standartabweichung $\sigma$ bezieht sich im Folgenden auf die Grundgesammtheit! Es kann also vorkommen, das eine Standartabweichung gegeben ist, dann ist allerdings noch zu Prüfen ob es sich um die der Stichprobe oder der Grundgesammtheit handelt. \\
+	Mit $\alpha$ in den Intervallformeln ist immer die Irrtumswahrscheinlichkeit gemeint.	
+	\subsubheading{Intervall für \boldmath$E(X)$ einer Normalverteilung}
+	\ccontent{Wenn nach Schätzintervall des \textbf{Erwartungswerts} gefragt ist. Prüfen ob Sigma bekannt oder nicht und danach Formel wählen. }
 	\ccontent{Ist $X \sim N(\mu, \sigma^2)$ verteilt, dann ist}
 	\ccontent{$Z = \frac{\overline{X} - \mu}{\sigma / \sqrt{n}} \sim N(0,1)$}
 	\subsubheading{Bei \textbf{bekannter} Standardabweichung $\sigma$}
 	\ccontent{$\left[\overline{x} - z_{1-(\alpha / 2)} \cdot \frac{\sigma}{\sqrt{n}}, \overline{x} + z_{1-(\alpha / 2)} \cdot \frac{\sigma}{\sqrt{n}}\right]$}
 	\ccontent{$\overline{X} = $ arithmetisches Mittel, bzw erwartungsstreuer Schätzer bei $n$ unabhängigen Stichproben}
-	\ccontent{$\alpha = $ Signifikanzwahrscheinlichkeit (Irrtumswahrscheinlichkeit)}
-	\ccontent{$1-\alpha = $ Vertrauensniveau}
-	\ccontent{Ist $\alpha$ gegegeben, berechne das Quantil $z_{1-(\alpha / 2)}$}
+	\ccontent{$\alpha = $ Signifikanzwahrscheinlichkeit (Irrtumswahrscheinlichkeit) oder $\alpha = 1 - $Konfidenzniveau}
+	\ccontent{alternativ: $1-\alpha = $ Konfidenzniveau (Vertrauensniveau)}
+	\ccontent{Ist $\alpha$ bekannt, berechne das Quantil $z_{1-(\alpha / 2)}$}
 	
 	\subsubheading{Bei \textbf{unbekannter} Standardabweichung $\sigma$}
 	\ccontent{$\left[\overline{x} - t_{n-1;1-(\alpha / 2)} \cdot \frac{s}{\sqrt{n}}, \overline{x} + t_{n-1;1-(\alpha / 2)} \cdot \frac{s}{\sqrt{n}}\right]$}
@@ -452,7 +478,9 @@
 	\ccontent{ $s^2 = \frac{1}{n-1} \sum \limits_{i=1}^n(X_i - \overline{X})^2$}
 	\ccontent{ beziehungsweise }
 	\ccontent{ $s = \sqrt{\frac{1}{n-1} \sum \limits_{i=1}^n(X_i - \overline{X})^2}$}
-
+	\subsubheading{Intervall für \boldmath$Var(X)$ einer Normalverteilung}
+	\ccontent{Wenn nach Schätzintervall der \textbf{Varianz} gefragt ist.}
+	\ccontent{$\left[\frac{(n-1) \cdot s^2}{\chi^2_{n-1;1-\frac{\alpha}{2}}}, \frac{(n-1) \cdot s^2}{\chi^2_{n-1;\frac{\alpha}{2}}} \right]$}
 	\heading{Induktive Statistik - Hypothesentest}
 	Achtung die Standartabweichung $\sigma$ bezieht sich im Folgenden auf die Grundgesammtheit! Es kann also vorkommen, das eine Standartabweichung gegeben ist, dann ist allerdings noch zu Prüfen ob es sich um die der Stichprobe oder der Grundgesammtheit handelt.
 	\subheading{Tests für Lageparameter}
