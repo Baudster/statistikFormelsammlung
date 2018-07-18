@@ -172,10 +172,12 @@
 
 	\subsubheading{Formel von Bayes}
 	\ccontent{ $P(A \vert B) = \frac{P(B \vert A) \cdot P(A)}{P(B)}$}
+	\ccontent{Mit ersetzung von $P(B)$ durch den Satz der totalen Wahrscheinlichkeit:}
+	\ccontent{ $P(A \vert B) = \frac{P(B \vert A) \cdot P(A)}{P(B \vert A) \cdot P(A) + P(B \vert \overline{A}) \cdot P(\overline{A})}$ }
 
 	\subsubheading{Satz der totalen Wahrscheinlichkeit}
 	\ccontent{ $P(A) = \sum \limits_{i=1}^n (P(A \vert B_i) \cdot P(B_i))$}
-	
+	\ccontent{$P(A) = P(A \vert B) \cdot P(B) + P(A \vert \overline{B}) \cdot P(\overline{B})$}
 	\subsubheading{Viel Felder Tafel}
 	\def\arraystretch{1.5}% 
 	\begin{tabularx}{\columnwidth}{l|X|X|r}
