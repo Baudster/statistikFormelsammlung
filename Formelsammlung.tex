@@ -689,5 +689,46 @@
 	\begin{center}$\frac{a}{b}/c = \frac{a}{b} \cdot \frac{1}{c}$\end{center} \\
 	\cline{1-1}	
 	\end{tabularx}
+	\heading{Beispiele}
+	\subheading{Zentraler Grenzwertsatz}
+	\paragraph{Angabe} Seien $T_1, ..., T_{102}$ unabhängige 
+	Zufallsvariablen, die alle exponentialverteilt sind mit Rate 
+	$\lambda = 3$. Berechnen Sie Mittelwert und Standartabweichung 
+	von $S := T_1 + ... + T_{102}$ und $\overline{T} := \frac{1}{102}S$. 
+	Berechnen Sie die Wahrscheinlichkeiten $P(S>40)$ und 
+	$P(0,3 < \overline{T} < 0.4$
+	\paragraph{Lösung} Fst $Y \sim Exp(\lambda)$ dann 
+	$E(Y) = \frac{1}{\lambda}$ und $Var(Y) = \frac{1}{\lambda^2}$. \\
+	Also da $T_i \sim Exp(3)$: $E(T_i) = \frac{1}{3}$ und 
+	$Var(T_i) = \frac{1}{9}$. \\
+	Da 
+	\begin{enumerate}
+		\item $T_i$ unabhängig und identisch verteilt sind mit 
+		$E(T_i) = \frac{1}{3}$ und $Var(T_i) = \frac{1}{9}$
+		\item $n=102 \geq 30$
+	\end{enumerate}
+	$\stackrel{ZGS}{\Rightarrow}$ \\
+	1) $S = \sum \limits_{i=1}^{102} T_i \sim N(102\cdot \frac{1}{3}|102\cdot \frac{1}{9})$ \\
+	2) $\overline{T} := \frac{1}{102} \cdot \sum \limits_{i=1}^{102} T_i \sim N(\frac{1}{3}|\frac{1}{9} / 102)$ \\
+	also $S \sim N(34|\frac{34}{3})$ \\
+	Mittelwert von $S$: 34 \\
+	Standardabweichung von $S$: $\sqrt{\frac{34}{3}}$ \\
+	also $\overline{T} \sim N(\frac{1}{3}|\frac{1}{918})$ \\
+	Mittelwert von $\overline{T}$: $\frac{1}{3}$ \\
+	Standardabweichung von $\overline{T}$: $\frac{1}{918}$ \\
+	\begin{align*} 
+		P(S>40) &= 1-P(S\leq 40) \\ 
+				&= 1-\Phi\left(\frac{40-34}{\sqrt{\frac{34}{3}}}\right) \\
+				&= 1-0,962 \\
+				&= 0,038
+	\end{align*}
+	\begin{align*} 
+		P(0,3 < \overline{T} < 0,4) \\
+		= \Phi\left(\frac{0,4-\frac{1}{3}}{\sqrt{\frac{1}{918}}}\right) - \Phi\left(\frac{0,3-\frac{1}{3}}{\sqrt{\frac{1}{918}}}\right) \\ 
+		= \Phi(2,02) - \Phi(-1,01) \\
+		= \Phi(2,02) - (1-\Phi(1,01)) \\
+		= \Phi(2,02) - 1 + \Phi(1,01) \\
+		= 0,978 - 1 + 0,844 = 0,822
+	\end{align*}
 \end{multicols*}
 \end{document}
